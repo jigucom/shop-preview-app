@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	
+	<body>
+		<div id="uid">
+		
+		</div>
+		
+		<script src="jquery-3.1.1.min.js"></script>
+		<script>
+			$(function(){
+				$.ajax({ 
+				type: "POST",
+				data: JSON.stringify('{ "uniqueid": "0987f42e07f30668c85e18fe148c9238" }'),
+				url: "http://localhost:15000/api/topic/getdetail",
+				dataType:"json",				
+				success: function(data){
+					$("#uid").html(data[0]);
+					alert(data);
+				}});
+			});
+		</script>
+	</body>
+</html>
