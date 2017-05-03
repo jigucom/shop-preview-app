@@ -1,0 +1,3909 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shop.App.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:Shop.App.Domain.Models.AcctDocument">
+            <summary>
+            公众号返回订阅列表
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AcctDocument.CTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AuzResult.Access_Token">
+            <summary>
+            授权token
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AuzResult.Expires_In">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.UsrInfo.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.UsrInfo.UserName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.UsrInfo.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.UsrInfo.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.UsrInfo.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.UsrInfo.Address">
+            <summary>
+            地区
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.UsrInfo.Mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.UsrInfo.Birth">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.UsrInfo.Constellation">
+            <summary>
+            星座
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.QCloudInfo.UsrSig">
+            <summary>
+            用户签名
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Business_Address.Kind">
+            <summary>
+            种类
+            </summary>
+        </member>
+        <member name="T:Shop.App.Domain.Models.CNArea">
+            <summary>
+            中国行政区域
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CNArea.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CNArea.ParentId">
+            <summary>
+            父级ID
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CNArea.Level">
+            <summary>
+            行政等级
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CNArea.ZipCode">
+            <summary>
+            邮编编码
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CNArea.CityCode">
+            <summary>
+            区号
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CNArea.AreaCode">
+            <summary>
+            行政代码
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CNArea.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CNArea.ShortName">
+            <summary>
+            简称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CNArea.MergerName">
+            <summary>
+            组合名
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CNArea.PinYin">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CNArea.Lng">
+            <summary>
+            经度
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CNArea.Lat">
+            <summary>
+            维度
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CNAreaSimple.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CNAreaSimple.ParentId">
+            <summary>
+            父级ID
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CNAreaSimple.Name">
+            <summary>
+            简称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CNAreaSimple.PinYin">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.JiexiChildArea.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.JiexiChildArea.ParentId">
+            <summary>
+            父级ID
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.JiexiChildArea.Name">
+            <summary>
+            简称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.JiexiChildArea.PinYin">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Comm_Post_Like.Status">
+            <summary>
+            默认新增为1
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Comm_Reply_Like.Status">
+            <summary>
+            默认新增为1
+            </summary>
+        </member>
+        <member name="T:Shop.App.Domain.Models.Content_Frag">
+            <summary>
+            部分页面配置
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home.Carousels">
+            <summary>
+            轮播图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home.Navs">
+            <summary>
+            导航
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home.SectionPage">
+            <summary>
+            部分页面
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home_Doc.Url">
+            <summary>
+            跳转url 两种 jgkj://*** ,http://***
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home_Doc.Content">
+            <summary>
+            内容，文字图像的集合
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home_Doc.PUrl">
+            <summary>
+            图片链接地址
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home_Doc.Author">
+            <summary>
+            来源或作者
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home_Doc.CmtCount">
+            <summary>
+            评论数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home_Doc.CTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home_Doc.ViewType">
+            <summary>
+            文章类型 1:无图 2:一张图 3:三张图 4:广告 5:视频
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home_Doc.AuthorImg">
+            <summary>
+            作者头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home_Doc.CommName">
+            <summary>
+            出处
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home_Doc.Avatar">
+            <summary>
+            视频缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home_Doc.IsTop">
+            <summary>
+            是否置顶 1:是 0:否
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home_News.Title">
+            <summary>
+            新闻标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home_News.Url">
+            <summary>
+            新闻链接地址
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home_News.PUrl">
+            <summary>
+            图片链接地址
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home_News.Author">
+            <summary>
+            报社名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home_News.Other">
+            <summary>
+            备用字段
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home_News.CTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Home_News.RealType">
+            <summary>
+            新闻类型
+            </summary>
+        </member>
+        <member name="T:Shop.App.Domain.Models.Member_Collect">
+            <summary>
+            用户收藏
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Member_Verify.Count">
+            <summary>
+            当天短信发送次数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Member_Verify.Ip">
+            <summary>
+            请求发送短信的ip
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.MomentsMoodItem.ViewType">
+            <summary>
+             1:只是文字 2:单图文 3:多图文 5:视频加文字
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.MomentsMoodItem.Video">
+            <summary>
+            相关视频
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.MomentsMoodItem.Img">
+            <summary>
+            相关图片
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.MomentsMoodItem.Thumb">
+            <summary>
+            视频或者图片的缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.MomentsMoodItem.Topic">
+            <summary>
+            话题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.MomentsMoodItem.MutualVisible">
+            <summary>
+            是否只允许好友查看
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Moments_Like.Status">
+            <summary>
+            默认新增为1
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Moments_Keywords.Key">
+            <summary>
+            话题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Moments_Keywords.PUrl">
+            <summary>
+            代表图片链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Moments_Keywords.PicCount">
+            <summary>
+            图片数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Moments_Keywords.IssuerCount">
+            <summary>
+            发布数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Moments_Keywords.AttentCount">
+            <summary>
+            参与数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Moments_Keywords.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsDetailInfo.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsDetailInfo.Author">
+             <summary>
+            新闻社名称
+             </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsDetailInfo.AuthorImg">
+            <summary>
+            新闻社头像
+            </summary>   
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsDetailInfo.ReadCount">
+            <summary>
+            观看数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsDetailInfo.LikeCount">
+            <summary>
+            点赞数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsDetailInfo.CmtCount">
+            <summary>
+            评论数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsDetailInfo.LikeStatus">
+            <summary>
+            登录用户是否点赞
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsDetailInfo.IsCollected">
+            <summary>
+            是否已收藏
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsDetailInfo.RelRcmds">
+            <summary>
+            相关推荐
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsDetailInfo.Img">
+            <summary>
+            图片集合
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsDetailInfo.Video">
+            <summary>
+            视频集合
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsRcmd.Id">
+            <summary>
+            新闻id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsRcmd.Author">
+            <summary>
+            新闻社名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsRcmd.Title">
+            <summary>
+            新闻标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsRcmd.ReadCount">
+            <summary>
+            阅读量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsRcmd.CTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsRcmd.Url">
+            <summary>
+            视频链接或图片链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsImgInfo.PositionName">
+            <summary>
+            占位符名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsImgInfo.Alt">
+            <summary>
+            alt标签
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsImgInfo.Src">
+            <summary>
+            超链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsImgInfo.Width">
+            <summary>
+            宽
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsImgInfo.Height">
+            <summary>
+            高
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsVideoInfo.PositionName">
+            <summary>
+            占位符名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsVideoInfo.Alt">
+            <summary>
+            alt标签
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.News.NewsVideoInfo.Src">
+            <summary>
+            超链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Notify_Rec.Content">
+            <summary>
+            通知内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Notify_Rec.SourceType">
+            <summary>
+            来源类型 0:朋友圈 1:社区帖子 2:身边视频
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Notify_Rec.SourceId">
+            <summary>
+            来源id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Notify_Rec.UsrId">
+            <summary>
+            被通知的用户id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Notify_Rec.RelationId">
+            <summary>
+            关联id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Notify_Rec.RemoteUsrid">
+            <summary>
+            触发通知用户的id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Notify_Rec.NotifyType">
+            <summary>
+            通知类型 0:评论通知 1:点赞通知 2:系统通知 3:今日头条
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Notify_Rec.ActionTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Notify_Rec.IsRead">
+            <summary>
+            是否已阅读
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Notify_Rec.RelationIdType">
+            <summary>
+            关联id类型 0:本体 1:评论
+            </summary>
+        </member>
+        <member name="T:Shop.App.Domain.Models.CommPostItem">
+            <summary>
+            多媒体文件
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CommPostItem.BoardId">
+            <summary>
+            社区Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CommPostItem.ReadCount">
+            <summary>
+            阅读数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CommPostItem.CmtCount">
+            <summary>
+            评论数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CommPostItem.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CommPostItem.Body">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CommPostItem.Synopsis">
+            <summary>
+            简介
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CommPostItem.Likecount">
+            <summary>
+            喜欢人数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CommPostItem.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CommPostItem.Video">
+            <summary>
+            相关视频
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CommPostItem.Img">
+            <summary>
+            相关图片
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CommPostItem.ViewType">
+            <summary>
+            展示类型
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CommPostItem.IsTop">
+            <summary>
+            是否置顶
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.CommPostItem.Thumb">
+            <summary>
+            相关缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorConnection.RoomId">
+            <summary>
+            连麦房间id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorConnection.UsrId">
+            <summary>
+            连麦用户id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorConnection.PushUrl">
+            <summary>
+            推流url
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoom.Id">
+            <summary>
+            房间ID
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoom.Title">
+            <summary>
+            房间标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoom.RoomNum">
+            <summary>
+            房间编码 bizid_roomnum
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoom.ReadCount">
+            <summary>
+            观看数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoom.Status">
+            <summary>
+            直播状态 0:已结束 1:直播中 -1:已禁播 
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoom.CoverUrl">
+            <summary>
+            房间封面
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoom.PushUrl">
+            <summary>
+            推流url
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoom.Anchor">
+            <summary>
+            主播信息
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoom.Count">
+            <summary>
+            离线次数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoom.LikeCount">
+            <summary>
+            点赞数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfo.Id">
+            <summary>
+            房间ID
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfo.Title">
+            <summary>
+            房间标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfo.RoomNum">
+            <summary>
+            房间编码 bizid_roomnum
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfo.ReadCount">
+            <summary>
+            观看数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfo.LikeCount">
+            <summary>
+            点赞数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfo.Status">
+            <summary>
+            直播状态 0:已结束 1:直播中 -1:已禁播 
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfo.CoverUrl">
+            <summary>
+            房间封面
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfo.LikeStatus">
+            <summary>
+            是否点赞 1为已点赞 0为未点赞
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfo.Anchor">
+            <summary>
+            主播信息
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorInfo.Author">
+            <summary>
+            主播名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorInfo.AuthorImg">
+            <summary>
+            主播头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorInfo.Remark">
+            <summary>
+            主播个性签名
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorInfo.FocusStatus">
+             <summary>
+            是否已关注主播 1:已关注 0:未关注
+             </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorInfo.FansCount">
+             <summary>
+            粉丝数量
+             </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.PlayInfo.RTMP">
+            <summary>
+            rtmp://8792.liveplay.myqcloud.com/live/8792_170370a1a5
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.PlayInfo.FLV">
+            <summary>
+            http://8792.liveplay.myqcloud.com/live/8792_170370a1a5.flv
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.PlayInfo.HLS">
+            <summary>
+            http://8792.liveplay.myqcloud.com/live/8792_170370a1a5.m3u8
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoomOrdinary.Id">
+            <summary>
+            房间ID
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoomOrdinary.Title">
+            <summary>
+            房间标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoomOrdinary.RoomNum">
+            <summary>
+            房间编码 bizid_roomnum
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoomOrdinary.ReadCount">
+            <summary>
+            观看数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoomOrdinary.Status">
+            <summary>
+            直播状态 0:已结束 1:直播中 -1:已禁播 
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoomOrdinary.CoverUrl">
+            <summary>
+            房间封面
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoomOrdinary.PushUrl">
+            <summary>
+            推流url
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoomOrdinary.Anchor">
+            <summary>
+            主播信息
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoomOrdinary.LikeStatus">
+            <summary>
+            是否点赞 1为已点赞 0为未点赞
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoomOrdinary.LikeCount">
+            <summary>
+            点赞数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoomOrdinary.Audience">
+            <summary>
+            观众信息
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoomOrdinary.AudienceList">
+            <summary>
+            观众列表
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AnchorRoomOrdinary.MemberNum">
+            <summary>
+            观众数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfoOrdinary.Id">
+            <summary>
+            房间ID
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfoOrdinary.Title">
+            <summary>
+            房间标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfoOrdinary.RoomNum">
+            <summary>
+            房间编码 bizid_roomnum
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfoOrdinary.ReadCount">
+            <summary>
+            观看数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfoOrdinary.LikeCount">
+            <summary>
+            点赞数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfoOrdinary.Status">
+            <summary>
+            直播状态 0:已结束 1:直播中 -1:已禁播 
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfoOrdinary.CoverUrl">
+            <summary>
+            房间封面
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfoOrdinary.LikeStatus">
+            <summary>
+            是否点赞 1为已点赞 0为未点赞
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfoOrdinary.Anchor">
+            <summary>
+            主播信息
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfoOrdinary.Audience">
+            <summary>
+            观众信息
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfoOrdinary.AudienceList">
+            <summary>
+            观众列表
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.RoomInfoOrdinary.MemberNum">
+            <summary>
+            观众数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AudienceInfo.Author">
+            <summary>
+            观众名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.AudienceInfo.AuthorImg">
+            <summary>
+            关注头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.ListRoomInfo.Id">
+            <summary>
+            房间ID
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.ListRoomInfo.Title">
+            <summary>
+            房间标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.ListRoomInfo.ReadCount">
+            <summary>
+            观看数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.ListRoomInfo.CoverUrl">
+            <summary>
+            房间封面
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.ListRoomInfo.Anchor">
+            <summary>
+            主播信息
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.ConnectLiveView.AnchorPullUrl">
+            <summary>
+            主播加速拉流url
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.ConnectLiveView.AudiencePushUrl">
+            <summary>
+            观众推流url
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.PullView.AudiencePullUrl">
+            <summary>
+            关注加速拉流url
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.SearchResult.Count">
+            <summary>
+            该类型的总数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Side_Video_Like.Status">
+            <summary>
+            默认新增为1
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Side_Video_Reply.PId">
+            <summary>
+            被回复的Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Side_Video_Reply.UsrId">
+            <summary>
+            回复人
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Side_Video_Reply.Floor">
+            <summary>
+            楼层
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Side_Video_Reply.VideoId">
+            <summary>
+            视频Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Side_Video_Reply_Like.Status">
+            <summary>
+            默认新增为1
+            </summary>
+        </member>
+        <member name="T:Shop.App.Domain.Models.SysMedia">
+            <summary>
+            多媒体文件
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.SysMedia.MediaType">
+            <summary>
+            媒体类型，0为图片，1为视频
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.SysMedia.ContentType">
+            <summary>
+            具体的媒体类型名
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.SysMedia.Url">
+            <summary>
+            访问地址
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.SysMedia.ThumbUrl">
+            <summary>
+            缩略图访问地址
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.SysMedia.Description">
+            <summary>
+            描述,暂时为空
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.SysMedia.HashCode">
+            <summary>
+            哈希值，主要判断是否已经存在
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.SysMedia.Direction">
+            <summary>
+            视频方向 1:竖屏 0:横屏
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.SysVedioShowItem.PositionName">
+            <summary>
+            占位符名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.SysVedioShowItem.Alt">
+            <summary>
+            alt标签
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.SysVedioShowItem.Src">
+            <summary>
+            超链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.SysVedioShowItem.Avatar">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.SysVedioShowItem.IsPortrait">
+            <summary>
+            视频方向 1:竖屏 0:横屏
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.SysImgShowItem.PositionName">
+            <summary>
+            占位符名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.SysImgShowItem.Alt">
+            <summary>
+            alt标签
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.SysImgShowItem.Src">
+            <summary>
+            超链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.SysImgShowItem.Width">
+            <summary>
+            宽
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.SysImgShowItem.Height">
+            <summary>
+            高
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.UserWithImg.Author">
+            <summary>
+            发布人
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.UserWithImg.AuthorImg">
+            <summary>
+            发布人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WechatIndex.Classify">
+            <summary>
+            分类列表
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WechatIndex.Wechat">
+            <summary>
+            公众号列表
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Wechat_Classify.Id">
+            <summary>
+            数据库中的Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Wechat_Classify.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeChat_Topic.Id">
+            <summary>
+            数据库中的Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeChat_Topic.UniqueId">
+            <summary>
+            唯一Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeChat_Topic.Words">
+            <summary>
+            字数统计
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeChat_Topic.Url">
+            <summary>
+            微信的访问url，非微信浏览器过期不能访问
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeChat_Topic.Avatar">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeChat_Topic.Title">
+            <summary>
+            提取的标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeChat_Topic.Orgin_Title">
+            <summary>
+            微信原文标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeChat_Topic.Abstract">
+            <summary>
+            导读
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeChat_Topic.Source">
+            <summary>
+            微信原文等
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeChat_Topic.Content">
+            <summary>
+            微信内文等
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeChat_Topic.Read_Num">
+            <summary>
+            抓取时阅读的人数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeChat_Topic.Like_Num">
+            <summary>
+            抓取时喜欢的人数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeChat_Topic.Publish_Time">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeChat_Topic.Create_Time">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeChat_Topic.Update_Time">
+            <summary>
+            最近一次修改时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeChat_Topic.Available">
+            <summary>
+            是否可用
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeChat_Topic.WeChat_Id">
+            <summary>
+            对应数据库中微信公众号的ID
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Wechat_Wechat.Id">
+            <summary>
+            数据库中的Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Wechat_Wechat.ClassId">
+            <summary>
+            所属分类的Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Wechat_Wechat.Avatar">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Wechat_Wechat.Name">
+            <summary>
+            公众号的名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.Wechat_Wechat.Intro">
+            <summary>
+            公众号的简介
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeiZhangInfo.RecordId">
+            <summary>
+            违章记录id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeiZhangInfo.Time">
+            <summary>
+            违章时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeiZhangInfo.Fine">
+            <summary>
+            罚款金额
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeiZhangInfo.CarNo">
+            <summary>
+            车牌号
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeiZhangInfo.CityName">
+            <summary>
+            违章城市
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeiZhangInfo.Code">
+            <summary>
+            违章代码
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeiZhangInfo.Behavior">
+            <summary>
+            违章行为
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeiZhangInfo.CanHandle">
+            <summary>
+            是否支持处理
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeiZhangInfo.ServiceFee">
+            <summary>
+            服务费用
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeiZhangInfo.DeductPoint">
+            <summary>
+            扣分
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeiZhangInfo.ZhinaJin">
+            <summary>
+            滞纳金(滞纳金在没有封顶的情况下可能会有误差,个别城市由于政策原因可能不返回)
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Models.WeiZhangInfo.Address">
+            <summary>
+            违章地址
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.QCloud.ApiKey">
+            <summary>
+            API鉴权key
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.QCloud.PushKey">
+            <summary>
+            推流防盗链Key
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.QCloud.Account">
+            <summary>
+            管理员帐号
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.QCloud.SdkAppId">
+            <summary>
+            SDKAPPID
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.QCloud.AppId">
+            <summary>
+            appid
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.QCloud.BizId">
+            <summary>
+            bizid
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.QCloud.CallBack">
+            <summary>
+            回调url
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.QCloud.UsrSigApi">
+            <summary>
+            生成签名api
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.QCloud.PlayKey">
+            <summary>
+            播放鉴权key
+            </summary>
+        </member>
+        <member name="T:Shop.App.Domain.AdVto">
+            <summary>
+            广告
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.CommComplete.FocusComm">
+            <summary>
+            个人关注社区
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.AppVersion.IsOwnedUpdate">
+            <summary>
+            是否拥有更新
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.AppVersion.IsForcedUpdate">
+            <summary>
+            是否强制升级
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.AppVersion.UpdateUrl">
+            <summary>
+            app更新下载路径
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.AppVersion.UpdateContent">
+            <summary>
+            更新内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.AppVersion.LatestVersion">
+            <summary>
+            最新版本号
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.AppVersion.ReleaseContent">
+            <summary>
+            发布描述
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.AppVersion.Size">
+            <summary>
+            大小 例如 35737
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.HotVideo.Url">
+            <summary>
+            视频链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.HotVideo.Title">
+            <summary>
+            视频标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.HotVideo.Avatar">
+            <summary>
+            视频缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.HotVideo.VideoId">
+            <summary>
+            视频Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.HotVideoList.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.HotVideoList.Avatar">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.HotVideoList.Abstract">
+            <summary>
+            导读
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.HotVideoList.ReadCount">
+            <summary>
+            观看人数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.HotVideoList.CmtCount">
+            <summary>
+            评论数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.HotVideoList.CTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.HotVideoList.Duration">
+            <summary>
+            视频时长
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.UsrId">
+            <summary>
+            发帖人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.Author">
+            <summary>
+            发帖人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.AuthorImg">
+            <summary>
+            发帖人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.ReadCount">
+            <summary>
+            观看数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.LikeCount">
+            <summary>
+            点赞数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.CmtCount">
+            <summary>
+            评论数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.LikeStatus">
+            <summary>
+            登录用户是否点赞
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.Topic">
+            <summary>
+            话题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.Url">
+            <summary>
+            视频链接或图片链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.Avatar">
+            <summary>
+            视频缩略图（不是视频则为空）
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.IsFocousAuthor">
+            <summary>
+            是否已关注发帖人 1：已关注 0：未关注
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.ViewType">
+            <summary>
+            类型：1：文字 2：单张图片 3：多张图片 5：视频
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.CommId">
+            <summary>
+            社区id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.CommName">
+            <summary>
+            社区名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.IsCollected">
+            <summary>
+            是否已收藏
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.RelRcmds">
+            <summary>
+            相关推荐
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.WHth">
+            <summary>
+            图片宽高  如宽X高,宽X高...
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Post.Is_Virtual_Publish">
+            <summary>
+            是否后台发帖
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.PostRcmd.Id">
+            <summary>
+            帖子id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.PostRcmd.UsrId">
+            <summary>
+            发帖人id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.PostRcmd.Author">
+            <summary>
+            发帖人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.PostRcmd.AuthorImg">
+            <summary>
+            发帖人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.PostRcmd.Title">
+            <summary>
+            帖子标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.PostRcmd.Content">
+            <summary>
+            帖子内容（文字）
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.PostRcmd.ReadCount">
+            <summary>
+            阅读量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.PostRcmd.CTime">
+            <summary>
+            发帖时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.PostRcmd.Url">
+            <summary>
+            视频链接或图片链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.PostList.Id">
+            <summary>
+            帖子Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.PostList.Content">
+            <summary>
+            帖子标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.PostList.Nick">
+            <summary>
+            发帖人
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.PostList.Avatar">
+            <summary>
+            发帖人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.PostList.UsrId">
+            <summary>
+            发帖人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.PostList.CmtCount">
+            <summary>
+            帖子评论数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.PostList.LikeCount">
+            <summary>
+            帖子点赞数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.PostList.CTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchData.Url">
+            <summary>
+            跳转url 两种 jgkj://*** ,http://***
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchData.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchData.PUrl">
+            <summary>
+            只有一张图或视频链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchData.Avatar">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchData.CTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchData.ViewType">
+            <summary>
+            文章类型 1:无图 2:一张图 
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchData.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchData.AuthorImg">
+            <summary>
+            作者头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToComm.Url">
+            <summary>
+            跳转url 两种 jgkj://*** ,http://***
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToComm.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToComm.Avatar">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToComm.CTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToComm.ViewType">
+            <summary>
+            文章类型 1:无图 2:一张图 3：多张图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToComm.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToComm.AuthorImg">
+            <summary>
+            作者头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToComm.Source">
+            <summary>
+            来源社区
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToMoment.Url">
+            <summary>
+            跳转url 两种 jgkj://*** ,http://***
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToMoment.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToMoment.Avatar">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToMoment.CTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToMoment.ViewType">
+            <summary>
+            文章类型 1:无图 2:一张图 3：多张图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToMoment.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToMoment.AuthorImg">
+            <summary>
+            作者头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToMoment.LikeStatus">
+            <summary>
+            是否点赞 （只有生活圈有）
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToMoment.Likes">
+            <summary>
+            点赞人
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToMoment.Replies">
+            <summary>
+            回复
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToUser.Url">
+            <summary>
+            跳转url 两种 jgkj://*** ,http://***
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToUser.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToUser.AuthorImg">
+            <summary>
+            作者头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToUser.FocusStatus">
+            <summary>
+            关注状态 1:已关注 0:未关注（只有用户组拥有）
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToUser.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.SearchItemToUser.Remark">
+            <summary>
+            个人签名
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.TalkVto.UsrId">
+            <summary>
+            话题发起人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.TalkVto.Author">
+            <summary>
+            话题发起人
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.TalkVto.Content">
+            <summary>
+            话题内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.TalkVto.Avatar">
+            <summary>
+            概览图（如果有视频）
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.TalkVto.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.TalkVto.RUrl">
+            <summary>
+            资源链接地址
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.TalkVto.Topic">
+            <summary>
+            话题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.TalkVto.Other">
+            <summary>
+            备用字段
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.TopicArr.AttentCount">
+            <summary>
+            参与人数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.TopicArr.Title">
+            <summary>
+            分组名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.TopicArr.Size">
+            <summary>
+            话题数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.TopicArr.Set">
+            <summary>
+            话题分组集
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.TopicGroup.PUrl">
+            <summary>
+            原图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.TopicGroup.Topic">
+            <summary>
+            话题名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Video.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Video.LikeCount">
+            <summary>
+            点赞数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Video.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Video.Url">
+            <summary>
+            视频链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Video.Avatar">
+            <summary>
+            视频缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Video.CTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Video.LikeStatus">
+            <summary>
+            点赞的状态
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Video.ViewType">
+            <summary>
+            类型： 5：视频
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Video.IsCollected">
+            <summary>
+            是否已收藏
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Video.Duration">
+            <summary>
+            视频时长
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.Video.RelRcmds">
+            <summary>
+            相关推荐
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VideoRcmd.Id">
+            <summary>
+            视频id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VideoRcmd.Title">
+            <summary>
+            视频标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VideoRcmd.Content">
+            <summary>
+            视频内容（导读）
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VideoRcmd.ReadCount">
+            <summary>
+            阅读量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VideoRcmd.CTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VideoRcmd.Url">
+            <summary>
+            视频链接或图片链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReply.Id">
+            <summary>
+            评论Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReply.PId">
+            <summary>
+            被引用的回复Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReply.UsrId">
+            <summary>
+            评论人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReply.Nick">
+            <summary>
+            评论人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReply.Content">
+            <summary>
+            评论内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReply.LikeCount">
+            <summary>
+            楼层点赞数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReply.CTime">
+            <summary>
+            发表评论时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReply.Avatar">
+            <summary>
+            评论人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReply.LikeStatus">
+            <summary>
+            当前登录用户是否点赞
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReply.Floor">
+            <summary>
+            楼层编号
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReply.CmtId">
+            <summary>
+            主评论id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReply.Replies">
+            <summary>
+            被引用的回复
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReply.DocId">
+            <summary>
+            视频id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReply.ReplyCount">
+            <summary>
+            回复数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReply.BeUsrId">
+            <summary>
+            被引用回复的人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReply.BeNick">
+            <summary>
+            被引用回复的人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReply.BeAvatar">
+            <summary>
+            被回复人头像
+            </summary>
+        </member>
+        <member name="T:Shop.App.Domain.ValueToObject.VReplyPObj">
+            <summary>
+            被回复对象
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReplyPObj.Id">
+            <summary>
+            评论Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReplyPObj.PId">
+            <summary>
+            被引用的回复Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReplyPObj.UsrId">
+            <summary>
+            评论人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReplyPObj.Nick">
+            <summary>
+            评论人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReplyPObj.Content">
+            <summary>
+            评论内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReplyPObj.LikeCount">
+            <summary>
+            楼层点赞数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReplyPObj.CTime">
+            <summary>
+            发表评论时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReplyPObj.Avatar">
+            <summary>
+            评论人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReplyPObj.LikeStatus">
+            <summary>
+            当前登录用户是否点赞
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReplyPObj.Floor">
+            <summary>
+            楼层编号
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReplyPObj.CmtId">
+            <summary>
+            主评论id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReplyPObj.DocId">
+            <summary>
+            视频id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReplyPObj.ReplyCount">
+            <summary>
+            回复数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReplyPObj.BeUsrId">
+            <summary>
+            被引用回复的人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReplyPObj.BeNick">
+            <summary>
+            被引用回复的人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReplyPObj.BeAvatar">
+            <summary>
+            被回复人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ValueToObject.VReplyPObj.BeContent">
+            <summary>
+            被回复的回复
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ChatDetail.Author">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ChatDetail.AuthorImg">
+             <summary>
+            头像
+             </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ChatDetail.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ChatDetail.IsSender">
+            <summary>
+            是否为发送方 1：发送方 0：接收方
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.CommClassify.CommId">
+            <summary>
+            社区分类id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.CommClassify.Name">
+            <summary>
+            社区分类名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.CommClassify.PUrl">
+            <summary>
+            图标url
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoreComm.Classify">
+            <summary>
+            所有社区分类
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoreComm.MyFocus">
+            <summary>
+            我关注的
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.BoardModel.BoardId">
+             <summary>
+            社区id
+             </summary>
+        </member>
+        <member name="P:Shop.App.Domain.BoardModel.Name">
+            <summary>
+            社区名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.BoardModel.PUrl">
+            <summary>
+            图标url
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.BoardModel.Remark">
+            <summary>
+            简介
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.BoardModel.IsFocous">
+            <summary>
+            是否关注 1：已关注 0：未关注
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.CommShare.Url">
+            <summary>
+            分享url
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.CommShare.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.CommShare.Thumbnail">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.CommShare.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArr.Id">
+            <summary>
+            评论Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArr.PId">
+            <summary>
+            被引用的回复Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArr.UsrId">
+            <summary>
+            评论人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArr.Nick">
+            <summary>
+            评论人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArr.Content">
+            <summary>
+            评论内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArr.LikeCount">
+            <summary>
+            楼层点赞数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArr.CTime">
+            <summary>
+            发表评论时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArr.Avatar">
+            <summary>
+            评论人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArr.LikeStatus">
+            <summary>
+            当前登录用户是否点赞
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArr.Floor">
+            <summary>
+            楼层编号
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArr.CmtId">
+            <summary>
+            主评论id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArr.Replies">
+            <summary>
+            被引用的回复
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArr.DocId">
+            <summary>
+            帖子id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArr.ReplyCount">
+            <summary>
+            回复数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArr.BeUsrId">
+            <summary>
+            被引用回复的人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArr.BeNick">
+            <summary>
+            被引用回复的人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArr.BeAvatar">
+            <summary>
+            被回复人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetail.Id">
+            <summary>
+            评论id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetail.UsrId">
+            <summary>
+            评论人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetail.Nick">
+            <summary>
+            评论人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetail.Content">
+            <summary>
+            评论内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetail.LikeCount">
+            <summary>
+            楼层点赞数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetail.CTime">
+            <summary>
+            发表评论时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetail.Avatar">
+            <summary>
+            评论人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetail.LikeStatus">
+            <summary>
+            登录用户是否点赞 1为已点赞 0为未点赞
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetail.Replies">
+            <summary>
+            回复
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetail.Likes">
+            <summary>
+            点赞集合 只返回5个
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.LikeStatistics.Id">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.LikeStatistics.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.LikeStatistics.Nick">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArrToWechat.Id">
+            <summary>
+            评论Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArrToWechat.PId">
+            <summary>
+            被引用的回复Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArrToWechat.UsrId">
+            <summary>
+            评论人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArrToWechat.Nick">
+            <summary>
+            评论人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArrToWechat.Content">
+            <summary>
+            评论内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArrToWechat.LikeCount">
+            <summary>
+            楼层点赞数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArrToWechat.CTime">
+            <summary>
+            发表评论时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArrToWechat.Avatar">
+            <summary>
+            评论人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArrToWechat.LikeStatus">
+            <summary>
+            当前登录用户是否点赞
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArrToWechat.Floor">
+            <summary>
+            楼层编号
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArrToWechat.CmtId">
+            <summary>
+            主评论id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArrToWechat.Replies">
+            <summary>
+            被引用的回复
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArrToWechat.DocId">
+            <summary>
+            文章id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArrToWechat.ReplyCount">
+            <summary>
+            回复数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArrToWechat.BeUsrId">
+            <summary>
+            被引用回复的人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArrToWechat.BeNick">
+            <summary>
+            被引用回复的人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FloorArrToWechat.BeAvatar">
+            <summary>
+            被回复人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetailToWechat.Id">
+            <summary>
+            评论id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetailToWechat.UsrId">
+            <summary>
+            评论人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetailToWechat.Nick">
+            <summary>
+            评论人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetailToWechat.Content">
+            <summary>
+            评论内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetailToWechat.LikeCount">
+            <summary>
+            楼层点赞数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetailToWechat.CTime">
+            <summary>
+            发表评论时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetailToWechat.Avatar">
+            <summary>
+            评论人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetailToWechat.LikeStatus">
+            <summary>
+            登录用户是否点赞 1为已点赞 0为未点赞
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetailToWechat.Replies">
+            <summary>
+            回复
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyDetailToWechat.Likes">
+            <summary>
+            点赞集合 只返回5个
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyToWechat.Id">
+            <summary>
+            回复Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyToWechat.PId">
+            <summary>
+            被引用的回复Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyToWechat.UsrId">
+            <summary>
+            回复人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyToWechat.Nick">
+            <summary>
+            回复人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyToWechat.Content">
+            <summary>
+            回复内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyToWechat.LikeCount">
+            <summary>
+            楼层点赞数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyToWechat.Avatar">
+            <summary>
+            回复人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyToWechat.LikeStatus">
+            <summary>
+            当前登录用户是否点赞
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyToWechat.Floor">
+            <summary>
+            楼层编号
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyToWechat.CmtId">
+            <summary>
+            主评论id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyToWechat.BeUsrId">
+            <summary>
+            被引用回复的人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyToWechat.BeNick">
+            <summary>
+            被引用回复的人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyToWechat.BeAvatar">
+            <summary>
+            被回复人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyToWechat.CTime">
+            <summary>
+            发表评论时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyToWechat.DocId">
+            <summary>
+            文章id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ReplyToWechat.ReplyCount">
+            <summary>
+            回复数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FriendList.Nick">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FriendList.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FriendList.Remark">
+            <summary>
+            个人签名
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FriendList.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FriendList.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FriendList.Constellation">
+            <summary>
+            星座
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FriendList.Address">
+            <summary>
+            地区
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FriendList.Birth">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FriendList.FocusStatus">
+            <summary>
+            关注状态 1:已关注 0:未关注
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberCentre.PersonalInfo">
+            <summary>
+            个人信息
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberCentre.PersonalService">
+            <summary>
+            我的服务
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberPersonalInfo.FocusCount">
+            <summary>
+            关注数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberPersonalInfo.FansCount">
+            <summary>
+            粉丝数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberPersonalInfo.DynamicCount">
+            <summary>
+            动态数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberPersonalInfo.DynamicAvatars">
+            <summary>
+            最新动态缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberPersonalInfo.IsAnchor">
+            <summary>
+            是否为主播
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberInfo.Nick">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberInfo.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberInfo.Remark">
+            <summary>
+            个人签名
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberInfo.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberInfo.Thumb">
+            <summary>
+            头像缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberInfo.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberInfo.Constellation">
+            <summary>
+            星座
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberInfo.Address">
+            <summary>
+            地区
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberInfo.FocusStatus">
+            <summary>
+            关注状态 1：已关注 0：未关注
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberInfo.FocusCount">
+            <summary>
+            好友数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberInfo.FansCount">
+            <summary>
+            粉丝数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberInfo.DynamicCount">
+            <summary>
+            动态数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberInfo.UsrId">
+            <summary>
+            登录用户Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberInfo.BeUsrId">
+            <summary>
+            被查看用户Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberInfo.FansInfo">
+            <summary>
+            粉丝简单信息
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberSimple.Nick">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberSimple.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberSimple.Remark">
+            <summary>
+            个人签名
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberSimple.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberSimple.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberSimple.Constellation">
+            <summary>
+            星座
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberSimple.Address">
+            <summary>
+            地区
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberSimple.Birth">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberDynamic.PUrl">
+            <summary>
+            视频url或发布的第一张图片
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberDynamic.Url">
+            <summary>
+            视频缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberDynamic.Content">
+            <summary>
+            发布的内容或标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberDynamic.LikeCount">
+            <summary>
+            点赞数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberDynamic.ReadCount">
+            <summary>
+            阅读数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberDynamic.LikeStatus">
+            <summary>
+            点赞状态
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberDynamic.DynamicType">
+            <summary>
+            动态类型 1：生活圈动态 2：帖子动态
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberDynamic.ViewType">
+            <summary>
+            视图类型 1:纯文字 3：图文 5：视频文字
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberContainer.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberChat.Nick">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberChat.Avatar">
+            <summary>
+            用户头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberRcmd.Nick">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberRcmd.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberRcmd.Remark">
+            <summary>
+            个人签名
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberRcmd.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberRcmd.FansCount">
+            <summary>
+            粉丝数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberRcmd.AlbumCount">
+            <summary>
+            相册
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberRcmd.Popularity">
+            <summary>
+            人气
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberRcmd.FocusStatus">
+            <summary>
+            关注状态 1：已关注 0：未关注
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberRcmd.IsFriend">
+            <summary>
+            是否已经相互关注
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberFans.Count">
+            <summary>
+            粉丝数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberFans.Fans">
+            <summary>
+            粉丝
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.OtherMemberInfo.Nick">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.OtherMemberInfo.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.OtherMemberInfo.Remark">
+            <summary>
+            个人签名
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.OtherMemberInfo.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.OtherMemberInfo.Thumb">
+            <summary>
+            头像缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.OtherMemberInfo.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.OtherMemberInfo.Constellation">
+            <summary>
+            星座
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.OtherMemberInfo.Address">
+            <summary>
+            地区
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.OtherMemberInfo.FocusStatus">
+            <summary>
+            关注状态 1：已关注 0：未关注
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.OtherMemberInfo.FocusCount">
+            <summary>
+            好友数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.OtherMemberInfo.FansCount">
+            <summary>
+            粉丝数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.OtherMemberInfo.DynamicCount">
+            <summary>
+            动态数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.OtherMemberInfo.UsrId">
+            <summary>
+            登录用户Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.OtherMemberInfo.BeUsrId">
+            <summary>
+            被查看用户Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.OtherMemberInfo.FansInfo">
+            <summary>
+            粉丝简单信息
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.OtherMemberInfo.InfoSet">
+            <summary>
+            信息设置
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberSetting.EnableMoments">
+            <summary>
+            能否让对方看到动态=> 1能， 0不能
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberSetting.EnableMsg">
+            <summary>
+            能否让对方私信 =>1 能 ，0不能
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoodsList.ViewType">
+            <summary>
+            类型：1：文字 2：单图 3：多图 5：视频
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoodsList.UsrId">
+            <summary>
+            发布人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoodsList.Avatar">
+            <summary>
+            视频缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoodsList.Author">
+            <summary>
+            发布人
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoodsList.AuthorImg">
+            <summary>
+            发布人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoodsList.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoodsList.Url">
+            <summary>
+            图片或视频链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoodsList.CTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoodsList.Topic">
+            <summary>
+            话题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoodsList.ReadCount">
+            <summary>
+            浏览数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoodsList.LikeCount">
+            <summary>
+            点赞数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoodsList.CmtCount">
+            <summary>
+            评论数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoodsList.Location">
+            <summary>
+            地点
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoodsList.LikeStatus">
+            <summary>
+            是否点赞
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoodsList.Likes">
+            <summary>
+            点赞人
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoodsList.Replies">
+            <summary>
+            回复
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoodsList.ReplyCount">
+            <summary>
+            总回复条数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MoodsList.Thumb">
+            <summary>
+            帖子图片缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Likes.Id">
+            <summary>
+            点赞人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Likes.Nick">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Likes.Avatar">
+            <summary>
+            点赞人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Replies.Id">
+            <summary>
+            回复Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Replies.RepliedId">
+            <summary>
+            回复人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Replies.BeRepliedId">
+            <summary>
+            被回复人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Replies.Nick">
+            <summary>
+            回复人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Replies.Avatar">
+            <summary>
+            回复人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Replies.BeNick">
+            <summary>
+            被回复人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Replies.BeAvatar">
+            <summary>
+            被回复人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Replies.Content">
+            <summary>
+            回复内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.RepliesToView.Id">
+            <summary>
+            回复Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.RepliesToView.RepliedId">
+            <summary>
+            回复人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.RepliesToView.BeRepliedId">
+            <summary>
+            被回复人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.RepliesToView.Content">
+            <summary>
+            回复内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.RepliesToView.Nick">
+            <summary>
+            回复人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.RepliesToView.Avatar">
+            <summary>
+            回复人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.RepliesToView.BeNick">
+            <summary>
+            被回复人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.RepliesToView.BeAvatar">
+            <summary>
+            被回复人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ResInfo.Thumbnail">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ResInfo.Src">
+            <summary>
+            图片链接或视频链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ResInfo.Width">
+            <summary>
+            宽
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ResInfo.Height">
+            <summary>
+            高
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.ResInfo.IsPortrait">
+            <summary>
+            视频方向 1:竖屏 0:横屏
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NewsListVto.Url">
+            <summary>
+            新闻跳转链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NewsListVto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NewsListVto.ReadCount">
+            <summary>
+            阅读数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NewsListVto.Content">
+            <summary>
+            导读
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NewsListVto.PUrl">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NewsListVto.CmtCount">
+            <summary>
+            评论数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NewsListVto.Author">
+            <summary>
+            来源
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NewsListVto.Other">
+            <summary>
+            备用字段
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NewsListVto.ViewType">
+            <summary>
+            文章类型 1：无图 2：一张图 3：三张图 4：广告
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyDetail.Id">
+            <summary>
+            通知记录id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyDetail.UsrId">
+            <summary>
+            发布者id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyDetail.Author">
+            <summary>
+            发布者名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyDetail.AuthorImg">
+            <summary>
+            发布者头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyDetail.Abstract">
+            <summary>
+            导读
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyDetail.Content">
+            <summary>
+            评论内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyDetail.Url">
+            <summary>
+            视频或图片链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyDetail.ViewType">
+            <summary>
+            类型：1:无图 2:一张图 3:三张图 4:广告 5:视频
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyDetail.SourceType">
+            <summary>
+            0:身边圈 1:社区帖子 2:火爆视频 3:新闻 4:微信文章
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyDetail.SourceId">
+            <summary>
+            来源id （帖子id，生活圈动态id）
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyDetail.RelationIdType">
+            <summary>
+            关联id类型，0:本体（帖子id，身边圈动态id,） 1:评论
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyDetail.RelationId">
+            <summary>
+            关联id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyDetail.ReadCount">
+            <summary>
+            阅读量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyDetail.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FocusNotifyDetail.FocusStatus">
+            <summary>
+            关注状态 1：已关注 0：未关注
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FocusNotifyDetail.Source">
+            <summary>
+            来源：社区、生活圈、社区评论
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FocusNotifyDetail.Avatar">
+            <summary>
+            视频缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyList.Title">
+            <summary>
+            评论通知||私信通知||点赞通知||系统通知||今日头条||新粉丝通知
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyList.Content">
+            <summary>
+            通知内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyList.NotifyType">
+            <summary>
+            notifytype 0:评论通知 1:私信通知 2:点赞通知 3:系统通知 4:今日头条 5:新粉丝通知
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyList.NotifyTime">
+            <summary>
+            通知时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.NotifyList.Count">
+            <summary>
+            通知条数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PointTask.Content">
+            <summary>
+            任务内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PointTask.RecordDate">
+            <summary>
+            记录日期
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PointTask.Point">
+            <summary>
+            任务积分数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PointTask.IsFulfill">
+            <summary>
+            是否已完成
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PointTask.Url">
+            <summary>
+            跳转链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PointTask.TaskType">
+            <summary>
+            2 是一次性任务 
+            3 是日常重复型任务
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PointTask.Other">
+            <summary>
+            任务代号
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PostLastestVto.UsrId">
+            <summary>
+            发布人id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PostLastestVto.Author">
+            <summary>
+            发布人
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PostLastestVto.AuthorImg">
+            <summary>
+            发布人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PostLastestVto.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PostLastestVto.Title">
+            <summary>
+            帖子标题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PostLastestVto.CTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PostLastestVto.ReadCount">
+            <summary>
+            浏览数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PostLastestVto.ViewType">
+            <summary>
+            类型：1:无图 2:一张图 3:三张图 4:广告 5:视频
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PostLastestVto.Topic">
+            <summary>
+            话题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PostLastestVto.Avatar">
+            <summary>
+            视频缩略图，不是视频类型则为null
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PostLastestVto.Url">
+            <summary>
+            视频或图片链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PostLastestVto.CommId">
+            <summary>
+            社区Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PostLastestVto.CommName">
+            <summary>
+            社区名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PostLastestVto.SkipUrl">
+            <summary>
+            跳转url
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PostLastestVto.IsVirtualPublish">
+            <summary>
+            是否后台发帖
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.CommInfos.Infos">
+            <summary>
+            公告或活动信息
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.CommInfos.Posts">
+            <summary>
+            帖子
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PostToComm.IsAwards">
+            <summary>
+            是否有奖
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PostToComm.Thumb">
+            <summary>
+            帖子图片缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.PostToComm.AuthorThumb">
+            <summary>
+            作者头像缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.CommBar.IsActivity">
+            <summary>
+            1为活动 0为公告
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.CommBar.DocId">
+            <summary>
+            关联的帖子id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MemberGroup.Member_Account">
+            <summary>
+            要添加的群成员ID（必填）
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.QIMMemberInfo.FocusStatus">
+            <summary>
+            1 为已关注 0为未关注 
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Reply.Id">
+            <summary>
+            回复Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Reply.PId">
+            <summary>
+            被引用的回复Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Reply.UsrId">
+            <summary>
+            回复人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Reply.Nick">
+            <summary>
+            回复人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Reply.Content">
+            <summary>
+            回复内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Reply.LikeCount">
+            <summary>
+            楼层点赞数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Reply.Avatar">
+            <summary>
+            回复人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Reply.LikeStatus">
+            <summary>
+            当前登录用户是否点赞
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Reply.Floor">
+            <summary>
+            楼层编号
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Reply.CmtId">
+            <summary>
+            主评论id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Reply.BeUsrId">
+            <summary>
+            被引用回复的人Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Reply.BeNick">
+            <summary>
+            被引用回复的人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Reply.BeAvatar">
+            <summary>
+            被回复人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Reply.CTime">
+            <summary>
+            发表评论时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Reply.DocId">
+            <summary>
+            帖子id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Reply.ReplyCount">
+            <summary>
+            回复数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.SignInInfo.Point">
+            <summary>
+            积分数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.SignInInfo.IsSignIn">
+            <summary>
+            是否已签到
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.SignInInfo.ContCount">
+            <summary>
+            连续签到天数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.SignInInfo.LSignInDate">
+            <summary>
+            上次签到日期
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.SignInInfo.Record">
+            <summary>
+            积分记录
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.SignInRec.IsSignIn">
+            <summary>
+            是不是已签到
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Topic.Url">
+            <summary>
+            跳转url 两种 jgkj://*** ,http://***
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Topic.Content">
+            <summary>
+            内容，文字图像的集合
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Topic.PUrl">
+            <summary>
+            图片链接地址
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Topic.Author">
+            <summary>
+            来源或作者
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Topic.CmtCount">
+            <summary>
+            评论数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Topic.CTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Topic.Other">
+             <summary>
+            备用字段
+             </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Topic.ViewType">
+            <summary>
+            文章类型 1:无图 2:一张图 3:三张图 4:广告 5:视频
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Topic.AuthorImg">
+            <summary>
+            作者头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Topic.CommName">
+            <summary>
+            出处
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.Topic.Avatar">
+            <summary>
+            视频缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicDetail.Topic">
+            <summary>
+            话题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicDetail.PUrl">
+            <summary>
+            图片链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicDetail.Content">
+            <summary>
+            发布内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicDetail.AttentCount">
+            <summary>
+            参与人数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicDetail.PicCount">
+            <summary>
+            图片数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicDetail.Issuers">
+            <summary>
+            发话题人
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicDetail.IssuerCount">
+            <summary>
+            发话题人数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicBody.UsrId">
+            <summary>
+            发布人id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicBody.Author">
+            <summary>
+            发布人
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicBody.AuthorImg">
+            <summary>
+            发布人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicBody.Topic">
+            <summary>
+            话题
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicBody.PUrl">
+            <summary>
+            图片链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicBody.Avatar">
+            <summary>
+            视频缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicBody.Content">
+            <summary>
+            发布内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicBody.CTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicBody.LikeStatus">
+            <summary>
+            登录用户是否已点赞 1为已点赞 0为未点赞
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicBody.LikeCount">
+            <summary>
+            点赞数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicBody.Thumb">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicBody.Url">
+            <summary>
+            图片或视频链接
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicBody.ReadCount">
+            <summary>
+            浏览数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicBody.CmtCount">
+            <summary>
+            评论数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicBody.Location">
+            <summary>
+            地点
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicBody.Likes">
+            <summary>
+            点赞人
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicBody.Replies">
+            <summary>
+            回复
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicBody.ReplyCount">
+            <summary>
+            总回复条数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicReply.AnswererId">
+            <summary>
+            回复者id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicReply.Answerer">
+            <summary>
+            回复者
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicReply.AnswererImg">
+            <summary>
+            回复者头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicReply.BeAnswererId">
+            <summary>
+            被回复者id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicReply.BeAnswerer">
+            <summary>
+            被回复者
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicReply.BeAnswererImg">
+            <summary>
+            被回复者头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicReply.Content">
+            <summary>
+            回复内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicReply.CTime">
+            <summary>
+            回复时间
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicSelect.AttentCount">
+            <summary>
+            参与人数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicSelect.Topic">
+            <summary>
+            话题 包含“#”
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.TopicSelect.Purl">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FocusWechat.Name">
+            <summary>
+            公众号
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FocusWechat.Avatar">
+            <summary>
+            公众号头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FocusWechat.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.FocusWechat.FocusStatus">
+            <summary>
+            1：已关注 0：未关注
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.WechatDocInfo.Id">
+            <summary>
+            公众号id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.WechatDocInfo.Avatar">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.WechatDocInfo.Name">
+            <summary>
+            公众号的名称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.WeChatCmtVto.DocId">
+            <summary>
+            文章Id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.WeChatCmtVto.UsrId">
+            <summary>
+            回复人id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.WeChatCmtVto.Nick">
+            <summary>
+            回复人昵称
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.WeChatCmtVto.Avatar">
+            <summary>
+            回复人头像
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.WeChatCmtVto.LikeCount">
+            <summary>
+            点赞数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.WeChatCmtVto.Content">
+            <summary>
+            回复内容
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.WeChatCmtVto.CmtCount">
+            <summary>
+            此回复拥有的回复数
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.WeChatCmtVto.LikeStatus">
+            <summary>
+            是否对这条回复点赞过
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.View_Board_Intro.CommId">
+            <summary>
+            分类id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.View_Board_Intro.PostNum">
+            <summary>
+            帖子数量
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.View_Board_Intro.UserNum">
+            <summary>
+            关注人数
+            </summary>
+        </member>
+    </members>
+</doc>
