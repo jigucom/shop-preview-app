@@ -4,6 +4,36 @@
         <name>Shop.App.Domain</name>
     </assembly>
     <members>
+        <member name="P:Shop.App.Domain.JsApiRequest.appId">
+            <summary>
+            应用APPID
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.JsApiRequest.nonceStr">
+            <summary>
+            随机字符串
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.JsApiRequest.prepayid">
+            <summary>
+            预支付交易会话标识
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.JsApiRequest.signType">
+            <summary>
+            签名类型 ，如“MD5”
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.JsApiRequest.paySign">
+            <summary>
+            支付签名
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.JsApiRequest.partnerid">
+            <summary>
+            商户id
+            </summary>
+        </member>
         <member name="P:Shop.App.Domain.JsApiForm.OrderNo">
             <summary>
             内部订单号码

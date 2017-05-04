@@ -28,33 +28,55 @@
             模型验证
             </summary>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.CommonController.CheckVersion(System.String)">
+        <member name="M:Shop.App.WebApi.Controllers.CommonController.CheckVersion">
             <summary>
             比对App版本 
             </summary>
             <remarks>
-            安卓:version-number_0 ios:version-number_1
+            Headers 
+            Android-Id:安卓id
+            Mac-Address:安卓mac
+            App-OS:操作系统 Android iOS
+            IDFA:iOS设备唯一标识
+            App-Version:app版本
             </remarks>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.CommonController.UploadMedia(Microsoft.AspNetCore.Http.IFormFile)">
+        <member name="M:Shop.App.WebApi.Controllers.CommonController.UploadMedia(Shop.App.Commands.UploadMedia,Shop.App.WebApi.Models.UploadMediaVM)">
             <summary>
             上传单个媒体文件，拿到媒体文件的id
             </summary>
             <param name="file"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.CommonController.QCloudCallBack(Shop.App.WebApi.Models.QCloudCallBackVM)">
+        <member name="M:Shop.App.WebApi.Controllers.CommonController.QCloudCallBack(Shop.App.Commands.ProcessCallBack,Microsoft.Extensions.Options.IOptions{Shop.App.Domain.QCloud},Shop.App.WebApi.Models.QCloudCallBackVM)">
             <summary>
             接收直播事件回调通知,请勿调用
             </summary>
-            <param name="file"></param>
+            <param name="callback"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.CommonController.GenerateUserSig">
+        <member name="M:Shop.App.WebApi.Controllers.CommonController.ProcessShare(Shop.App.Commands.ProcessShareCmd,Shop.App.WebApi.Models.ProcessShareVM)">
             <summary>
-            生成UserSig
+            处理分享
             </summary>
+            <param name="_processCmd"></param>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.App.WebApi.Controllers.CommonController.SuccessShare(Shop.App.Commands.ProcessShareCmd,Shop.App.WebApi.Models.SuccessShareVM)">
+            <summary>
+            分享成功
+            </summary>
+            <param name="_processCmd"></param>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.App.WebApi.Controllers.CommonController.Suggestion(Shop.App.Commands.SubmitSuggestion,Shop.App.WebApi.Models.SuggestionVM)">
+            <summary>
+            提交app意见
+            </summary>
+            <param name="Content"></param>
             <returns></returns>
         </member>
         <member name="T:Shop.App.WebApi.Controllers.CommunityController">
@@ -62,21 +84,21 @@
             社区相关
             </summary>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.CommunityController.GetBoardIntro(System.Int64)">
+        <member name="M:Shop.App.WebApi.Controllers.CommunityController.GetBoardIntro(Shop.App.QueryService.BoardService,System.Int64)">
             <summary>
             获取社区板块的介绍和统计等信息
             </summary>
             <param name="Id"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.CommunityController.ListCommAndAd">
+        <member name="M:Shop.App.WebApi.Controllers.CommunityController.ListCommAndAd(Shop.App.QueryService.BoardService)">
             <summary>
             列出社区上半部分
             </summary>
             <param name="UsrId"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.CommunityController.PostList(Shop.App.WebApi.Models.CommDetailVM)">
+        <member name="M:Shop.App.WebApi.Controllers.CommunityController.PostList(Shop.App.QueryService.BoardService,Shop.App.WebApi.Models.CommDetailVM)">
             <summary>
             列出社区的动态 
             </summary>
@@ -86,7 +108,7 @@
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.CommunityController.FocusPostList(Shop.App.WebApi.Models.ListFocusMsgVM)">
+        <member name="M:Shop.App.WebApi.Controllers.CommunityController.FocusPostList(Shop.App.QueryService.BoardService,Shop.App.WebApi.Models.ListFocusMsgVM)">
             <summary>
             列出关注社区的帖子
             </summary>
@@ -98,14 +120,14 @@
             举报、收藏
             </summary>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.FeedbackController.Report(Shop.App.WebApi.Models.ReportVM)">
+        <member name="M:Shop.App.WebApi.Controllers.FeedbackController.Report(Shop.App.Commands.AddReport,Shop.App.WebApi.Models.ReportVM)">
             <summary>
             举报统一接口
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.FeedbackController.Collect(Shop.App.WebApi.Models.Member.CollectVM)">
+        <member name="M:Shop.App.WebApi.Controllers.FeedbackController.Collect(Shop.App.Commands.AddOrNoCollect,Shop.App.WebApi.Models.Member.CollectVM)">
             <summary>
             统一收藏入口，返回1则说明收藏了，返回0则说明取消收藏了
             </summary>
@@ -117,13 +139,13 @@
             公共服务相关
             </summary>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.HelperController.GetChildArea(System.Int32)">
+        <member name="M:Shop.App.WebApi.Controllers.HelperController.GetChildArea(Shop.App.QueryService.CNAreaService,System.Int32)">
             <summary>
             获取省市的下级行政区域
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.HelperController.JiexiChildArea">
+        <member name="M:Shop.App.WebApi.Controllers.HelperController.JiexiChildArea(Shop.App.QueryService.CNAreaService)">
             <summary>
             获取揭西的所有下属
             </summary>
@@ -136,7 +158,7 @@
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.HelperController.WeizhangQuery(Shop.App.WebApi.WeiZhangQueryVM)">
+        <member name="M:Shop.App.WebApi.Controllers.HelperController.WeizhangQuery(Shop.App.Commands.FindeOrNewWeiZhang,Shop.App.WebApi.WeiZhangQueryVM)">
             <summary>
             车辆违规查询
             </summary>
@@ -148,13 +170,13 @@
             首页相关
             </summary>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.HomeController.Index">
+        <member name="M:Shop.App.WebApi.Controllers.HomeController.Index(Shop.App.QueryService.HomeService)">
             <summary>
             获取首页数据 更
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.HomeController.GetHomeDocList(Shop.App.WebApi.Models.Home.ListHomeDocVm)">
+        <member name="M:Shop.App.WebApi.Controllers.HomeController.GetHomeDocList(Shop.App.QueryService.HomeDocService,Shop.App.WebApi.Models.Home.ListHomeDocVm)">
             <summary>
             获取首页的文章列表
             </summary>
@@ -165,7 +187,7 @@
             个人空间
             </summary>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.IndvSpaceController.StartupMoments(Shop.App.WebApi.Models.StartupMomentsVM)">
+        <member name="M:Shop.App.WebApi.Controllers.IndvSpaceController.StartupMoments(Shop.App.Commands.StartupMomentsCmd,Shop.App.WebApi.Models.StartupMomentsVM)">
             <summary>
             设置好友是否能看你的动态
             </summary>
@@ -175,9 +197,9 @@
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.IndvSpaceController.StartupMsg(Shop.App.WebApi.Models.StartupMomentsVM)">
+        <member name="M:Shop.App.WebApi.Controllers.IndvSpaceController.StartupMsg(Shop.App.Commands.StartupMsgCmd,Shop.App.WebApi.Models.StartupMomentsVM)">
             <summary>
-            设置好友是否能发私信给你
+            设置用户是否能发私信给你
             </summary>
             <remarks>
             返回 1：可以发私信 0：不能发私信
@@ -185,7 +207,7 @@
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.IndvSpaceController.GetEnableMsgStatus(Shop.App.WebApi.Models.StartupMomentsVM)">
+        <member name="M:Shop.App.WebApi.Controllers.IndvSpaceController.GetEnableMsgStatus(Shop.App.QueryService.IndvSpaceService,Shop.App.WebApi.Models.StartupMomentsVM)">
             <summary>
             检测是否能发私信给对方
             </summary>
@@ -195,7 +217,7 @@
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.IndvSpaceController.SetRemark(Shop.App.WebApi.Models.SetRmkVM)">
+        <member name="M:Shop.App.WebApi.Controllers.IndvSpaceController.SetRemark(Shop.App.Commands.SetRmkCmd,Shop.App.WebApi.Models.SetRmkVM)">
             <summary>
             设置好友备注名
             </summary>
@@ -205,7 +227,7 @@
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.IndvSpaceController.RecLocus(Shop.App.WebApi.Models.RecLocusVM)">
+        <member name="M:Shop.App.WebApi.Controllers.IndvSpaceController.RecLocus(Shop.App.Commands.SetLocusCmd,Shop.App.WebApi.Models.RecLocusVM)">
             <summary>
             记录地理位置信息
             </summary>
@@ -220,150 +242,164 @@
             会员相关
             </summary>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.Logout(System.Int64)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.Logout(Microsoft.Extensions.Options.IOptions{JG.Shop.Common.AppStrings},System.Int64)">
             <summary>
             退出帐号
             </summary>
             <param name="UsrId"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.QuickLogin(Shop.App.WebApi.Models.Member.QuickLoginViewModel)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.QuickLogin(Shop.App.Commands.QLogin,Shop.App.QueryService.AuthenticateService,Shop.App.QueryService.MemberService,Shop.App.WebApi.Models.Member.QuickLoginViewModel)">
             <summary>
             快捷登录
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.SendMessage(Shop.App.WebApi.Models.Member.SendMsgViewModel)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.SendMessage(Shop.App.Commands.SendSMS,Shop.App.WebApi.Models.Member.SendMsgViewModel)">
             <summary>
             发送验证码
             </summary>
             <param name="Mobile"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.LoadOtherInfo(Shop.App.WebApi.Models.MemberTrackVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.LoadOtherInfo(Shop.App.QueryService.MemberService,Shop.App.WebApi.Models.MemberTrackVM)">
             <summary>
             根据用户Id加载用户信息
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.ListDynamicMsg(Shop.App.WebApi.Models.ListMemberTrackVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.ListDynamicMsg(Shop.App.QueryService.MemberService,Shop.App.WebApi.Models.ListMemberTrackVM)">
             <summary>
             根据用户Id列出用户足迹
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.ListFriend(Shop.App.WebApi.Models.ListFriendVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.ListFriend(Shop.App.QueryService.MemberService,Shop.App.WebApi.Models.ListFriendVM)">
             <summary>
             列出好友
             </summary>
             <param name="UserId"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.ListFans(Shop.App.WebApi.Models.ListFansVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.ListFans(Shop.App.QueryService.MemberService,Shop.App.WebApi.Models.ListFansVM)">
             <summary>
             列出粉丝
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.SetFocus(Shop.App.WebApi.Models.SetFocusVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.SetFocus(Shop.App.Commands.SetFocus,Shop.App.WebApi.Models.SetFocusVM)">
             <summary>
             设置关注 返回的Data：1为已关注 0为未关注
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.UploadAvatar(Shop.App.WebApi.Models.UploadAvatarVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.UploadAvatar(Shop.App.Commands.UploadMedia,Shop.App.Commands.UploadAvatar,Shop.App.WebApi.Models.UploadAvatarVM)">
             <summary>
             上传用户头像
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.SetRegId(Shop.App.WebApi.Models.SetRegIdVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.SetRegId(Shop.App.Commands.SetReg,Shop.App.WebApi.Models.SetRegIdVM)">
             <summary>
             设置设备id
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.GetNotifyMsg(System.Int64)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.GetNotifyMsg(Shop.App.QueryService.MemberService,System.Int64)">
             <summary>
             获取用户卸载或退出再登录后遗漏的信息
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.InfoComplete(Shop.App.WebApi.Models.ResetNickVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.InfoComplete(Shop.App.Commands.ResetInfo,Shop.App.WebApi.Models.ResetNickVM)">
             <summary>
             设置用户基本信息
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.GetChatDetail(Shop.App.WebApi.Models.ChatDetailVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.GetChatDetail(Shop.App.QueryService.MemberService,Shop.App.WebApi.Models.ChatDetailVM)">
             <summary>
             获取聊天详情
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.GetCollect(Shop.App.WebApi.Models.GetCollectVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.GetCollect(Shop.App.QueryService.MemberService,Shop.App.WebApi.Models.GetCollectVM)">
             <summary>
-            查看个人收藏的列表,目前仅有帖子
+            查看个人收藏的列表
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.GetMemberImg(System.Int64)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.GetMemberImg(Shop.App.QueryService.MemberService,System.Int64)">
             <summary>
             获取用户头像
             </summary>
             <param name="Id"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.ListFocus(Shop.App.WebApi.Models.ListFansVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.ListFocus(Shop.App.QueryService.MemberService,Shop.App.WebApi.Models.ListFansVM)">
             <summary>
             列出关注的用户
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.MyCentre(System.Int64)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.MyCentre(Shop.App.QueryService.MemberService,System.Int64)">
             <summary>
             我的
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.ThirdBinding(Shop.App.WebApi.Models.ThirdBindingVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.ThirdBinding(Shop.App.Commands.BindThirdAccount,Shop.App.QueryService.MemberService,Shop.App.WebApi.Models.ThirdBindingVM)">
             <summary>
             第三方帐号绑定
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.ThirdLogin(Shop.App.WebApi.Models.ThirdLoginVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.ThirdLogin(Shop.App.Commands.ThirdLogin,Shop.App.QueryService.AuthenticateService,Shop.App.QueryService.MemberService,Shop.App.WebApi.Models.ThirdLoginVM)">
             <summary>
             第三方登录
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.CheckVerifyCode(Shop.App.WebApi.Models.Member.CheckVerifyCodeVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.CheckVerifyCode(Shop.App.WebApi.Models.Member.CheckVerifyCodeVM,Shop.App.QueryService.MemberService)">
             <summary>
             检测短信验证码是否正确
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MemberController.GetRcmdMember">
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.GetRcmdMember(Shop.App.QueryService.MemberService)">
             <summary>
             获取推荐关注的用户
             </summary>
             <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.GetSimpleInfo(Shop.App.QueryService.MemberService,System.Int64)">
+            <summary>
+            得到用户简单信息
+            </summary>
+            <param name="UsrId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.App.WebApi.Controllers.MemberController.DelCollect(Shop.App.Commands.DelCollectCmd,System.Int64)">
+            <summary>
+            删除收藏记录
+            </summary>
+            <param name="Id"></param>
             <returns></returns>
         </member>
         <member name="T:Shop.App.WebApi.Controllers.MomentsController">
@@ -371,7 +407,7 @@
             身边圈相关
             </summary>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MomentsController.PublishMood(Shop.App.WebApi.Models.PublishMoodVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MomentsController.PublishMood(Shop.App.Commands.AddMoodItem,Shop.App.WebApi.Models.PublishMoodVM)">
             <summary>
             发布身边圈动态
             </summary>
@@ -379,99 +415,105 @@
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MomentsController.SendCmt(Shop.App.WebApi.Models.Moments.AddMoodCmtVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MomentsController.SendCmt(Shop.App.QueryService.MoodService,Shop.App.Commands.Moments.AddMoodCmt,Shop.App.WebApi.Models.Moments.AddMoodCmtVM)">
             <summary>
             发表动态评论
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MomentsController.GetMoodList(Shop.App.WebApi.Models.Moments.MoodListVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MomentsController.GetMoodList(Shop.App.QueryService.MoodService,Shop.App.WebApi.Models.Moments.MoodListVM)">
             <summary>
             获取身边圈动态
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MomentsController.GetUserList(Shop.App.WebApi.Models.Moments.UserListVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MomentsController.GetUserList(Shop.App.QueryService.MoodService,Shop.App.WebApi.Models.Moments.UserListVM)">
             <summary>
             获取身边圈附近的人
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MomentsController.Like(Shop.App.WebApi.Models.Moments.MoodLikeVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MomentsController.Like(Shop.App.QueryService.MoodService,Shop.App.Commands.Moments.UpdateOrInsertLike,Shop.App.WebApi.Models.Moments.MoodLikeVM)">
             <summary>
             点赞或取消动态的点赞
             </summary> 
             <remarks>Data=0为未点赞状态，Data=1为点赞状态</remarks>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MomentsController.QueryComments(Shop.App.WebApi.Models.ListCommentsVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MomentsController.QueryComments(Shop.App.QueryService.MoodService,Shop.App.WebApi.Models.ListCommentsVM)">
             <summary>
             列出动态的评论
             </summary> 
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MomentsController.FriendState(Shop.App.WebApi.Models.FriendStateVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MomentsController.FriendState(Shop.App.QueryService.MoodService,Shop.App.WebApi.Models.FriendStateVM)">
             <summary>
             好友动态
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MomentsController.GetTopics(Shop.App.WebApi.Models.Moments.HotTopicVm)">
+        <member name="M:Shop.App.WebApi.Controllers.MomentsController.GetTopics(Shop.App.QueryService.MoodService,Shop.App.WebApi.Models.Moments.HotTopicVm)">
             <summary>
             话题圈
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MomentsController.GetTopicDetail(Shop.App.WebApi.Models.TopicDetailVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MomentsController.GetTopicDetail(Shop.App.QueryService.MoodService,Shop.App.WebApi.Models.TopicDetailVM)">
             <summary>
             话题详情
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MomentsController.ListTopic(Shop.App.WebApi.Models.TopicListVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MomentsController.ListTopic(Shop.App.QueryService.MoodService,Shop.App.WebApi.Models.TopicListVM)">
             <summary>
             话题列表
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MomentsController.ListTopicCmt(Shop.App.WebApi.Models.ListTopicDVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MomentsController.ListTopicCmt(Shop.App.QueryService.MoodService,Shop.App.WebApi.Models.ListTopicDVM)">
             <summary>
             话题回复列表
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MomentsController.GetLikeMen(Shop.App.WebApi.Models.LikeMenVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MomentsController.GetLikeMen(Shop.App.QueryService.MoodService,Shop.App.WebApi.Models.LikeMenVM)">
             <summary>
             身边圈点赞人详情
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MomentsController.FilterUsr(Shop.App.WebApi.Models.FilterUsrVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MomentsController.FilterUsr(Shop.App.Commands.FilterUsr,Shop.App.WebApi.Models.FilterUsrVM)">
             <summary>
             筛掉附近人中的用户
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MomentsController.TopicSelect(Shop.App.WebApi.Models.ListVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MomentsController.TopicSelect(Shop.App.QueryService.MoodService,Shop.App.WebApi.Models.ListVM)">
             <summary>
             选择话题
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.MomentsController.GetMoodDetail(Shop.App.WebApi.Models.GetMoodDetailVM)">
+        <member name="M:Shop.App.WebApi.Controllers.MomentsController.GetMoodDetail(Shop.App.QueryService.MoodService,Shop.App.WebApi.Models.GetMoodDetailVM)">
             <summary>
             获取身边圈动态详情
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.App.WebApi.Controllers.MomentsController.Del(Shop.App.Commands.DelMood,System.Int64)">
+            <summary>
+            用户删掉自己发布的动态
+            </summary> 
             <returns></returns>
         </member>
         <member name="T:Shop.App.WebApi.Controllers.NewsController">
@@ -479,45 +521,45 @@
             新闻相关
             </summary>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.NewsController.GetNewsDetail(Shop.App.WebApi.Models.News.GetDetailVM)">
+        <member name="M:Shop.App.WebApi.Controllers.NewsController.GetNewsDetail(Shop.App.QueryService.News.NewsService,Shop.App.WebApi.Models.News.GetDetailVM)">
             <summary>
             获取新闻的详情
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.NewsController.GetNewsByType(Shop.App.WebApi.Models.Home.ListNewsVM)">
+        <member name="M:Shop.App.WebApi.Controllers.NewsController.GetNewsByType(Shop.App.QueryService.News.NewsService,Shop.App.WebApi.Models.Home.ListNewsVM)">
             <summary>
             获取具体类型的新闻列表
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.NewsController.CmtPublish(Shop.App.WebApi.Models.CmtPublishVM)">
+        <member name="M:Shop.App.WebApi.Controllers.NewsController.CmtPublish(Shop.App.QueryService.News.NewsService,Shop.App.Commands.NewsCmtPublish,Shop.App.WebApi.Models.CmtPublishVM)">
             <summary>
             发表评论
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.NewsController.ListCmt(Shop.App.WebApi.Models.ListNewsCmtVM)">
+        <member name="M:Shop.App.WebApi.Controllers.NewsController.ListCmt(Shop.App.QueryService.News.NewsService,Shop.App.WebApi.Models.ListNewsCmtVM)">
             <summary>
             列出新闻回复
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.NewsController.Like(Shop.App.WebApi.Models.NewsLikeVM)">
+        <member name="M:Shop.App.WebApi.Controllers.NewsController.Like(Shop.App.Commands.UpdateNewsLike,Shop.App.WebApi.Models.NewsLikeVM)">
             <summary>
             点赞或取消新闻的点赞
             </summary> 
             <remarks>Data=0为未点赞状态，Data=1为点赞状态</remarks>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.NewsController.ReplyLike(Shop.App.WebApi.Models.NewsReplyLikeVM)">
+        <member name="M:Shop.App.WebApi.Controllers.NewsController.ReplyLike(Shop.App.Commands.NewsReplyLike,Shop.App.WebApi.Models.NewsReplyLikeVM)">
             <summary>
             回复或评论的点赞
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.NewsController.CmtDetail(Shop.App.WebApi.Models.NewsCmtDetailVM)">
+        <member name="M:Shop.App.WebApi.Controllers.NewsController.CmtDetail(Shop.App.QueryService.News.NewsService,Shop.App.WebApi.Models.NewsCmtDetailVM)">
             <summary>
             某个回复详情
             </summary>
@@ -529,7 +571,7 @@
             推送相关
             </summary>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.NotifyController.GetNotifyDetail(Shop.App.WebApi.Models.Notify.GetNotifyDetailVM)">
+        <member name="M:Shop.App.WebApi.Controllers.NotifyController.GetNotifyDetail(Shop.App.QueryService.NotifyService,Shop.App.WebApi.Models.Notify.GetNotifyDetailVM)">
             <summary>
             获取通知详情
             </summary>
@@ -541,51 +583,130 @@
             社区帖子相关
             </summary>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.PostController.GetPostDetail(Shop.App.WebApi.Models.PostDetailVM)">
+        <member name="M:Shop.App.WebApi.Controllers.PostController.GetPostDetail(Shop.App.QueryService.PostService,Shop.App.WebApi.Models.PostDetailVM)">
             <summary>
             帖子详情
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.PostController.Publish(Shop.App.WebApi.Models.Post.AddPostItemVM)">
+        <member name="M:Shop.App.WebApi.Controllers.PostController.Publish(Shop.App.Commands.AddPostItem,Shop.App.WebApi.Models.Post.AddPostItemVM)">
             <summary>
             发布帖子
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.PostController.SendCmt(Shop.App.WebApi.Models.Comment.AddCmtVM)">
+        <member name="M:Shop.App.WebApi.Controllers.PostController.SendCmt(Shop.App.QueryService.PostService,Shop.App.QueryService.CommentService,Shop.App.Commands.Comment.AddCmt,Shop.App.WebApi.Models.Comment.AddCmtVM)">
             <summary>
             发布社区回复
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.PostController.ListCmt(Shop.App.WebApi.Models.Comm.Comment.ListCmtVM)">
+        <member name="M:Shop.App.WebApi.Controllers.PostController.ListCmt(Shop.App.QueryService.PostService,Shop.App.QueryService.CommentService,Shop.App.WebApi.Models.Comm.Comment.ListCmtVM)">
             <summary>
             列出社区回复
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.PostController.Like(Shop.App.WebApi.Models.PostLikeVM)">
+        <member name="M:Shop.App.WebApi.Controllers.PostController.Like(Shop.App.QueryService.PostService,Shop.App.Commands.Post.UpdateOrInsertLike,Shop.App.WebApi.Models.PostLikeVM)">
             <summary>
             点赞或取消帖子的点赞
             </summary> 
             <remarks>Data=0为未点赞状态，Data=1为点赞状态</remarks>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.PostController.ReplyLike(Shop.App.WebApi.Models.ReplyLikeVM)">
+        <member name="M:Shop.App.WebApi.Controllers.PostController.ReplyLike(Shop.App.Commands.Floor.UpdateOrInsertLike,Shop.App.WebApi.Models.ReplyLikeVM)">
             <summary>
             回复或评论的点赞
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.PostController.CmtDetail(Shop.App.WebApi.Models.ListCmtDetailVM)">
+        <member name="M:Shop.App.WebApi.Controllers.PostController.CmtDetail(Shop.App.QueryService.PostService,Shop.App.QueryService.CommentService,Shop.App.WebApi.Models.ListCmtDetailVM)">
             <summary>
             某个回复详情
             </summary>
             <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.App.WebApi.Controllers.PostController.Del(Shop.App.Commands.DelPost,System.Int64)">
+             <summary>
+            用户删除自己发的帖子
+             </summary>
+             <param name="DocId"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Shop.App.WebApi.Controllers.QCloudController">
+            <summary>
+            直播相关
+            </summary>
+        </member>
+        <member name="M:Shop.App.WebApi.Controllers.QCloudController.RoomLike(Shop.App.Commands.RoomLikeCmd,Shop.App.WebApi.Models.RoomLikeVM)">
+            <summary>
+            直播房间点赞 
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.App.WebApi.Controllers.QCloudController.GetRooms(Shop.App.QueryService.QCloudService,Shop.App.WebApi.Models.GetRoomsVM)">
+            <summary>
+            拉取直播房间
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.App.WebApi.Controllers.QCloudController.RoomDetail(Shop.App.QueryService.QCloudService,System.Int64)">
+            <summary>
+            直播房间详情
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.App.WebApi.Controllers.QCloudController.List(Shop.App.QueryService.QCloudService,Shop.App.WebApi.Models.RoomListVM)">
+            <summary>
+            直播房间列表
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.App.WebApi.Controllers.QCloudController.GeneratePushUrl(Shop.App.Commands.GenerateUrl)">
+            <summary>
+            生成推流Url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.App.WebApi.Controllers.QCloudController.LogoutLive(Shop.App.Commands.LogoutLiveCmd)">
+            <summary>
+            退出直播
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.App.WebApi.Controllers.QCloudController.LoginLive(Shop.App.Commands.LoginLiveCmd,System.Int64)">
+            <summary>
+            开启直播（只有主播能操作）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.App.WebApi.Controllers.QCloudController.QueryMembers(Shop.App.QueryService.QCloudService,Shop.App.WebApi.Models.QIMMemberVM)">
+            <summary>
+            查询群组成员
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.App.WebApi.Controllers.QCloudController.ConnectLive(Shop.App.Commands.ConnectLiveCmd,Shop.App.WebApi.Models.ConnectLiveVM)">
+            <summary>
+            开启连麦（只有主播能操作）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.App.WebApi.Controllers.QCloudController.ConnectSuccess(Shop.App.Commands.ConctSuccessCmd,System.Int64)">
+            <summary>
+            用户连麦成功接口
+            </summary>
+            <remarks>
+            连麦观众推流成功后，连麦观众请求
+            </remarks>
             <returns></returns>
         </member>
         <member name="T:Shop.App.WebApi.Controllers.SearchController">
@@ -593,7 +714,7 @@
             搜索相关
             </summary>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.SearchController.MultiTypeList(Shop.App.WebApi.Models.Search.MultiTypeVM)">
+        <member name="M:Shop.App.WebApi.Controllers.SearchController.MultiTypeList(Shop.App.QueryService.SearchService,Shop.App.WebApi.Models.Search.MultiTypeVM)">
             <summary>
             根据关键字返回多种类型的对应的数据
             </summary>
@@ -605,21 +726,21 @@
             </remarks>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.SearchController.HotWords(Shop.App.WebApi.Models.Search.HotWordsVm)">
+        <member name="M:Shop.App.WebApi.Controllers.SearchController.HotWords(Shop.App.QueryService.SearchService,Shop.App.WebApi.Models.Search.HotWordsVm)">
             <summary>
             热门关键词
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.SearchController.HotWords(System.String)">
+        <member name="M:Shop.App.WebApi.Controllers.SearchController.HotWords(Shop.App.QueryService.SearchService,System.String)">
             <summary>
             搜索提示，比如输入测试，会返回含有测试的搜索关键词
             </summary>
             <param name="keyword"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.SearchController.GetUsrByKeyword(System.String)">
+        <member name="M:Shop.App.WebApi.Controllers.SearchController.GetUsrByKeyword(Shop.App.QueryService.SearchService,System.String)">
             <summary>
             搜索添加好友 昵称/手机号
             </summary>
@@ -631,25 +752,23 @@
             签到相关
             </summary>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.SignInController.IntegIncret">
+        <member name="M:Shop.App.WebApi.Controllers.SignInController.IntegIncret(Shop.App.Commands.SignInIncret)">
             <summary>
             签到
             </summary>
-            <param name="UsrId"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.SignInController.GetSignInInfo">
+        <member name="M:Shop.App.WebApi.Controllers.SignInController.GetSignInInfo(Shop.App.QueryService.SignInService)">
             <summary>
             获取签到信息
             </summary>
             <param name="UsrId"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.SignInController.GetPointTask">
+        <member name="M:Shop.App.WebApi.Controllers.SignInController.GetPointTask(Shop.App.QueryService.SignInService)">
             <summary>
             获取赚取积分任务
             </summary>
-            <param name="UsrId"></param>
             <returns></returns>
         </member>
         <member name="T:Shop.App.WebApi.Controllers.SVideoController">
@@ -657,57 +776,78 @@
             火爆视频
             </summary>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.SVideoController.GetSVideoDetail(Shop.App.WebApi.Models.Side.LikeVM)">
+        <member name="M:Shop.App.WebApi.Controllers.SVideoController.GetSVideoDetail(Shop.App.QueryService.SVideoService,Shop.App.WebApi.Models.Side.LikeVM)">
             <summary>
             视频详情
             </summary>
-            <param name="VideoId"></param>
+            <param name="view"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.SVideoController.Query(Shop.App.WebApi.Models.ListVReplyVM)">
+        <member name="M:Shop.App.WebApi.Controllers.SVideoController.Query(Shop.App.QueryService.SVideoService,Shop.App.WebApi.Models.ListVReplyVM)">
             <summary>
             列出回复
             </summary>
-            <param name="VideoId"></param>
+            <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.SVideoController.Reply(Shop.App.WebApi.Models.Side.AddVReplyVM)">
+        <member name="M:Shop.App.WebApi.Controllers.SVideoController.Reply(Shop.App.QueryService.SVideoService,Shop.App.Commands.AddVReply,Shop.App.WebApi.Models.Side.AddVReplyVM)">
             <summary>
             回复
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.SVideoController.Like(Shop.App.WebApi.Models.Side.LikeVM)">
+        <member name="M:Shop.App.WebApi.Controllers.SVideoController.Like(Shop.App.Commands.Side.UpdateOrInsertLike,Shop.App.WebApi.Models.Side.LikeVM)">
             <summary>
             点赞或取消点赞视频
             </summary> 
             <remarks>Data=0为未点赞状态，Data=1为点赞状态</remarks>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.SVideoController.LikeReply(Shop.App.WebApi.Models.Side.LikeReplyVM)">
+        <member name="M:Shop.App.WebApi.Controllers.SVideoController.LikeReply(Shop.App.Commands.Side.UpdateOrInsertReplyLike,Shop.App.WebApi.Models.Side.LikeReplyVM)">
             <summary>
             点赞或取消点赞视频评论
             </summary> 
             <remarks>Data=0为未点赞状态，Data=1为点赞状态</remarks>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.SVideoController.GetClassify">
+        <member name="M:Shop.App.WebApi.Controllers.SVideoController.GetClassify(Shop.App.QueryService.SVideoService)">
             <summary>
             获取视频分类
             </summary> 
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.SVideoController.GetList(Shop.App.WebApi.Models.SVideoListVM)">
+        <member name="M:Shop.App.WebApi.Controllers.SVideoController.GetList(Shop.App.QueryService.SVideoService,Shop.App.WebApi.Models.SVideoListVM)">
             <summary>
             获取视频列表
             </summary> 
             <returns></returns>
         </member>
+        <member name="M:Shop.App.WebApi.Controllers.TestController.PayCheck(Microsoft.Extensions.Options.IOptions{Shop.App.Domain.WXPaySet},Shop.App.WebApi.Models.PayCheckVM)">
+            <summary>
+            测试微信支付接口
+            </summary>
+            <param name="_wxPaySet"></param>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.App.WebApi.Controllers.TestController.Notify(Microsoft.Extensions.Options.IOptions{Shop.App.Domain.WXPaySet})">
+            <summary>
+            支付结果异步通知
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:Shop.App.WebApi.Controllers.TestController.GetCurrentUnixTimestamp">
             <summary>
-            毫秒
+            秒
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.App.WebApi.Controllers.TestController.CreateJsApiRequest(Shop.App.Domain.JsApiForm,Shop.App.Domain.WXPaySet)">
+            <summary>
+            微信浏览器内部调用js支付
+            </summary>
+            <param name="from"></param>
             <returns></returns>
         </member>
         <member name="T:Shop.App.WebApi.Controllers.TopicController">
@@ -715,41 +855,41 @@
             微信公众号文章
             </summary>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.TopicController.GetMyList(Shop.App.WebApi.Models.Topic.MyTopicVM)">
+        <member name="M:Shop.App.WebApi.Controllers.TopicController.GetMyList(Shop.App.QueryService.TopicService,Shop.App.WebApi.Models.Topic.MyTopicVM)">
             <summary>
             根据用户Id获取个人订阅的微信文章列表
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.TopicController.GetTopicDetail(Shop.App.WebApi.Models.Topic.TopicDetailViewModel)">
+        <member name="M:Shop.App.WebApi.Controllers.TopicController.GetTopicDetail(Shop.App.QueryService.TopicService,Shop.App.WebApi.Models.Topic.TopicDetailViewModel)">
             <summary>
             获取微信文章详情
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.TopicController.Like(Shop.App.WebApi.Models.LikeDocVM)">
+        <member name="M:Shop.App.WebApi.Controllers.TopicController.Like(Shop.App.Commands.WechatDocLike,Shop.App.WebApi.Models.LikeDocVM)">
             <summary>
             点赞或取消文章的点赞
             </summary> 
             <remarks>Data=0为未点赞状态，Data=1为点赞状态</remarks>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.TopicController.SendCmt(Shop.App.WebApi.Models.AddWeChatCmtVM)">
+        <member name="M:Shop.App.WebApi.Controllers.TopicController.SendCmt(Shop.App.Commands.AddWeChatCmt,Shop.App.QueryService.WechatService,Shop.App.WebApi.Models.AddWeChatCmtVM)">
             <summary>
             发表评论或回复
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.TopicController.GetCmts(Shop.App.WebApi.Models.ListWeChatCmtVM)">
+        <member name="M:Shop.App.WebApi.Controllers.TopicController.GetCmts(Shop.App.QueryService.WeChatCmtService,Shop.App.WebApi.Models.ListWeChatCmtVM)">
             <summary>
             列出评论
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.TopicController.ReplyLike(Shop.App.WebApi.Models.WechatCmtLikeVM)">
+        <member name="M:Shop.App.WebApi.Controllers.TopicController.ReplyLike(Shop.App.Commands.ChangeWechatCmtLike,Shop.App.WebApi.Models.WechatCmtLikeVM)">
             <summary>
             回复或评论的点赞
             </summary>
@@ -761,35 +901,35 @@
             微信公众号相关
             </summary>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.WechatController.GetFocusWecaht(Shop.App.WebApi.Models.WechatRcmdVM)">
+        <member name="M:Shop.App.WebApi.Controllers.WechatController.GetFocusWecaht(Shop.App.QueryService.WechatService,Shop.App.WebApi.Models.WechatRcmdVM)">
             <summary>
             获取关注的公众号
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.WechatController.GetRcmdWechat(Shop.App.WebApi.Models.WechatRcmdVM)">
+        <member name="M:Shop.App.WebApi.Controllers.WechatController.GetRcmdWechat(Shop.App.QueryService.WechatService,Shop.App.WebApi.Models.WechatRcmdVM)">
             <summary>
             获取推荐公众号
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.WechatController.GetWechatDetail(Shop.App.WebApi.Models.WechatDetailVM)">
+        <member name="M:Shop.App.WebApi.Controllers.WechatController.GetWechatDetail(Shop.App.QueryService.WechatService,Shop.App.WebApi.Models.WechatDetailVM)">
             <summary>
             获取微信公众号详情
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.WechatController.GetWechatNotify(Shop.App.WebApi.Models.WechatNotifyVM)">
+        <member name="M:Shop.App.WebApi.Controllers.WechatController.GetWechatNotify(Shop.App.QueryService.WechatService,Shop.App.WebApi.Models.WechatNotifyVM)">
             <summary>
             列出历史推送
             </summary>
             <param name="viewModel"></param>
             <returns></returns>
         </member>
-        <member name="M:Shop.App.WebApi.Controllers.WechatController.Sub(Shop.App.WebApi.Models.Wechat.WechatSubVM)">
+        <member name="M:Shop.App.WebApi.Controllers.WechatController.Sub(Shop.App.Commands.SubAcct,Shop.App.WebApi.Models.Wechat.WechatSubVM)">
             <summary>
             订阅公众号
             </summary>
@@ -996,6 +1136,11 @@
             回复id
             </summary>
         </member>
+        <member name="P:Shop.App.WebApi.Models.GetRoomsVM.OperateSystem">
+            <summary>
+            0:是安卓 1:ios
+            </summary>
+        </member>
         <member name="P:Shop.App.WebApi.Models.Help.ExpressageVM.CourierName">
             <summary>
             快递名称
@@ -1078,7 +1223,7 @@
         </member>
         <member name="P:Shop.App.WebApi.Models.Member.CollectVM.SourceType">
             <summary>
-            0.社区帖子 1:热门视频 2:微信文章
+            0.社区帖子 1:热门视频 2:微信文章 3:新闻
             </summary>
         </member>
         <member name="P:Shop.App.WebApi.Models.Member.LoginViewModel.UserName">
@@ -1165,11 +1310,13 @@
         <member name="P:Shop.App.WebApi.Models.ReportVM.SourceType">
             <summary>
             举报id的对应类型
-            0.用户id
-            1.帖子id
-            2.社区帖子的评论id
-            3.身边圈说说的id
-            4.视频评论的id
+            0.用户
+            1.帖子
+            2.社区帖子的评论
+            3.身边圈说说
+            4.视频评论
+            5.微信文章的评论
+            6.新闻的评论
             </summary>
         </member>
         <member name="P:Shop.App.WebApi.Models.ReportVM.TypeId">
@@ -1324,6 +1471,11 @@
         <member name="P:Shop.App.WebApi.Models.Moments.UserListVM.UsrId">
             <summary>
             登录用户id
+            </summary>
+        </member>
+        <member name="P:Shop.App.WebApi.Models.Moments.UserListVM.Gender">
+            <summary>
+            过滤 1:只看男  0:只看女  -1:看所有
             </summary>
         </member>
         <member name="P:Shop.App.WebApi.Models.FilterUsrVM.UsrId">
@@ -1491,6 +1643,21 @@
             用户ip地址
             </summary>
         </member>
+        <member name="P:Shop.App.WebApi.Models.PayCheckVM.Money">
+            <summary>
+            支付金额
+            </summary>
+        </member>
+        <member name="P:Shop.App.WebApi.Models.ProcessShareVM.ShareType">
+            <summary>
+            分享类型 帖子,微信文章,视频,个人信息,生活圈,直播,公众号 从0依次递增
+            </summary>
+        </member>
+        <member name="P:Shop.App.WebApi.Models.ProcessShareVM.ShareId">
+            <summary>
+            分享内容的id
+            </summary>
+        </member>
         <member name="P:Shop.App.WebApi.Models.QCloudCallBackVM.app">
             <summary>
             推流域名 "1234.livepush.myqcloud.com"
@@ -1576,6 +1743,21 @@
             "http://(cos_bucketname)-(cos_appid).file.myqcloud.com/2016-09-12/2016090090936-screenshot-10-03-08-1280x720.jpg"
             </summary>
         </member>
+        <member name="P:Shop.App.WebApi.Models.ConnectLiveVM.UsrId">
+            <summary>
+            连麦用户id
+            </summary>
+        </member>
+        <member name="P:Shop.App.WebApi.Models.ConnectLiveVM.RoomId">
+            <summary>
+            直播房间id
+            </summary>
+        </member>
+        <member name="P:Shop.App.WebApi.Models.RoomLikeVM.RoomId">
+            <summary>
+            房间ID
+            </summary>
+        </member>
         <member name="P:Shop.App.WebApi.Models.Search.HotWordsVm.Index">
             <summary>
             页码
@@ -1644,6 +1826,16 @@
         <member name="P:Shop.App.WebApi.Models.SVideoListVM.ClassifyId">
             <summary>
             分类id
+            </summary>
+        </member>
+        <member name="P:Shop.App.WebApi.Models.SuccessShareVM.ShareType">
+            <summary>
+            分享类型 帖子,微信文章,视频,个人信息,生活圈,直播,公众号 从0依次递增
+            </summary>
+        </member>
+        <member name="P:Shop.App.WebApi.Models.SuccessShareVM.ShareId">
+            <summary>
+            分享内容的id
             </summary>
         </member>
         <member name="P:Shop.App.WebApi.Models.Ticket.BusStartVM.DepartureTime">
