@@ -34,6 +34,11 @@
             商户id
             </summary>
         </member>
+        <member name="P:Shop.App.Domain.JsApiRequest.callBackUrl">
+            <summary>
+            支付回调url
+            </summary>
+        </member>
         <member name="P:Shop.App.Domain.JsApiForm.OrderNo">
             <summary>
             内部订单号码
