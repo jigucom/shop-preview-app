@@ -27,7 +27,7 @@
     "PlayKey": "388f584229ac11e791eae435c87f075e"
   },
   "WXPaySet": {
-    "AppId": "wxe0aa343bc950c2be",
+    "AppId": "wx4fe024a0631d26a8",
     "MchId": "1306712001",
     "SignKey": "qHiJilicCLcFisZQNWfl8P5N8YvCTSOH",
     "Notify": "https://app.samecity.com.cn/api/Test/Notify"
