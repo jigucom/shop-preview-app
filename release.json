@@ -25,5 +25,11 @@
     "CallBack": "http://app.samecity.com.cn/api/Common/QCloudCallBack",
     "UsrSigApi": "http://120.76.28.91:32772/getsig/",
     "PlayKey": "388f584229ac11e791eae435c87f075e"
+  },
+  "WXPaySet": {
+    "AppId": "wxe0aa343bc950c2be",
+    "MchId": "1440390902@1440390902",
+    "SignKey": "ed0c46a682a56a3cc408f671a43bcfe2",
+    "Notify": "https://app.samecity.com.cn/api/Test/Notify"
   }
 }
