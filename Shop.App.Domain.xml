@@ -4,6 +4,76 @@
         <name>Shop.App.Domain</name>
     </assembly>
     <members>
+        <member name="P:Shop.App.Domain.JsApiForm.OrderNo">
+            <summary>
+            内部订单号码
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.JsApiForm.BodyStr">
+            <summary>
+            显示的内容，如xx商品1件
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.JsApiForm.Price">
+            <summary>
+            金额
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.JsApiForm.UserIp">
+            <summary>
+            用户ip地址
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MchSetting.MchId">
+            <summary>
+            商户号
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MchSetting.Key">
+            <summary>
+            支付密钥
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MchSetting.CertPath">
+            <summary>
+            证书的地址
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.MchSetting.Password">
+            <summary>
+            证书密码
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.WeixinSetting.DefaultRedirectUrl">
+            <summary>
+            默认的返回地址
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.WeixinSetting.HostName">
+            <summary>
+            授权域名
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.WXPaySet.AppId">
+            <summary>
+            分配的应用id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.WXPaySet.MchId">
+            <summary>
+            商户id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.WXPaySet.SignKey">
+            <summary>
+            签名需要的key
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.WXPaySet.Notify">
+            <summary>
+            接收财付通通知的URL
+            </summary>
+        </member>
         <member name="T:Shop.App.Domain.Models.AcctDocument">
             <summary>
             公众号返回订阅列表

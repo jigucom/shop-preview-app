@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0",
-    "signature": "e8b3c3db86f6691e6ff44ecb5a9b1dc58f70ac3f"
+    "signature": "3bff9528742e7a1cd4dd896fef6bc6acdb456391"
   },
   "compilationOptions": {
     "defines": [
@@ -51,6 +51,8 @@
           "Microsoft.NETCore.App": "1.0.4",
           "NLog.Extensions.Logging": "1.0.0-rtm-alpha4",
           "Newtonsoft.Json": "10.0.1",
+          "Senparc.Weixin": "4.12.1",
+          "Senparc.Weixin.MP": "14.4.4",
           "Shop.App.Commands": "1.0.0",
           "Shop.App.QueryService": "1.0.0",
           "Swashbuckle": "6.0.0-beta902",
@@ -1866,7 +1868,7 @@
           "System.Data.Common": "4.3.0",
           "System.Diagnostics.Contracts": "4.3.0",
           "System.Diagnostics.StackTrace": "4.3.0",
-          "System.Diagnostics.TraceSource": "4.0.0",
+          "System.Diagnostics.TraceSource": "4.3.0",
           "System.IO.FileSystem.Watcher": "4.3.0",
           "System.Net.NameResolution": "4.3.0",
           "System.Net.Requests": "4.0.11",
@@ -1948,7 +1950,7 @@
           "System.Text.RegularExpressions": "4.3.0",
           "System.Threading": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0",
-          "System.Xml.XmlSerializer": "4.0.11"
+          "System.Xml.XmlSerializer": "4.3.0"
         },
         "runtime": {
           "lib/netstandard1.3/NPoco.dll": {}
@@ -2045,7 +2047,7 @@
           "System.Reflection.Emit.Lightweight": "4.3.0",
           "System.Reflection.TypeExtensions": "4.3.0",
           "System.Runtime.Serialization.Primitives": "4.3.0",
-          "System.Xml.XmlSerializer": "4.0.11"
+          "System.Xml.XmlSerializer": "4.3.0"
         },
         "runtime": {
           "lib/netstandard1.5/protobuf-net.dll": {}
@@ -2253,6 +2255,38 @@
           }
         }
       },
+      "senparc.weixin/4.12.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "1.1.1",
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "10.0.1",
+          "System.Diagnostics.TraceSource": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Threading.Thread": "4.3.0",
+          "System.Xml.XmlSerializer": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.6/Senparc.Weixin.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.6/Senparc.Weixin.dll": {}
+        }
+      },
+      "senparc.weixin.mp/14.4.4": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http": "1.1.1",
+          "NETStandard.Library": "1.6.1",
+          "Senparc.Weixin": "4.12.1",
+          "System.Xml.XPath.XmlDocument": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.6/Senparc.Weixin.MP.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.6/Senparc.Weixin.MP.dll": {}
+        }
+      },
       "stackexchange.redis/1.1.608": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -2310,7 +2344,7 @@
           "Microsoft.AspNetCore.Mvc.Core": "1.1.2",
           "Microsoft.AspNetCore.Mvc.DataAnnotations": "1.1.2",
           "Swashbuckle.Swagger": "6.0.0-beta902",
-          "System.Xml.XPath": "4.0.1"
+          "System.Xml.XPath": "4.3.0"
         },
         "runtime": {
           "lib/netstandard1.6/Swashbuckle.SwaggerGen.dll": {}
@@ -2324,7 +2358,7 @@
           "Microsoft.AspNetCore.Mvc.Core": "1.1.2",
           "Microsoft.AspNetCore.StaticFiles": "1.0.0",
           "Microsoft.Extensions.FileProviders.Embedded": "1.0.0",
-          "System.Xml.XPath": "4.0.1"
+          "System.Xml.XPath": "4.3.0"
         },
         "runtime": {
           "lib/netstandard1.6/Swashbuckle.SwaggerUi.dll": {}
@@ -2688,7 +2722,7 @@
       },
       "system.diagnostics.textwritertracelistener/4.0.0": {
         "dependencies": {
-          "System.Diagnostics.TraceSource": "4.0.0",
+          "System.Diagnostics.TraceSource": "4.3.0",
           "System.Globalization": "4.3.0",
           "System.IO": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
@@ -2712,7 +2746,7 @@
           "ref/netstandard1.0/System.Diagnostics.Tools.dll": {}
         }
       },
-      "system.diagnostics.tracesource/4.0.0": {
+      "system.diagnostics.tracesource/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
           "System.Collections": "4.3.0",
@@ -4004,7 +4038,7 @@
           "ref/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
-      "system.xml.xmlserializer/4.0.11": {
+      "system.xml.xmlserializer/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
           "System.Globalization": "4.3.0",
@@ -4029,6 +4063,45 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "system.xml.xpath/4.3.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Xml.ReaderWriter": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Xml.XPath.dll": {}
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Xml.XPath.dll": {}
+        }
+      },
+      "system.xml.xpath.xmldocument/4.3.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Xml.ReaderWriter": "4.3.0",
+          "System.Xml.XPath": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
       "zkweb.system.drawing/2.0.1": {
@@ -4451,23 +4524,6 @@
         },
         "compileOnly": true
       },
-      "system.xml.xpath/4.0.1": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.IO": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Threading": "4.3.0",
-          "System.Xml.ReaderWriter": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.3/System.Xml.XPath.dll": {}
-        },
-        "compileOnly": true
-      },
       "system.xml.xpath.xdocument/4.0.1": {
         "dependencies": {
           "System.Diagnostics.Debug": "4.3.0",
@@ -4478,7 +4534,7 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0",
-          "System.Xml.XPath": "4.0.1"
+          "System.Xml.XPath": "4.3.0"
         },
         "compileOnly": true
       }
@@ -5477,6 +5533,20 @@
       "path": "runtime.win7-x86.runtime.native.system.data.sqlclient.sni/4.0.1",
       "hashPath": "runtime.win7-x86.runtime.native.system.data.sqlclient.sni.4.0.1.nupkg.sha512"
     },
+    "senparc.weixin/4.12.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-K1LaO/qGvw+vqQeojQJvkOPmuoxfAE0Kwk7T4Vr5lCanUKg0ztDJRgU49PmxVWFUgm/fTyLLE0CvvbpUTeNSSA==",
+      "path": "senparc.weixin/4.12.1",
+      "hashPath": "senparc.weixin.4.12.1.nupkg.sha512"
+    },
+    "senparc.weixin.mp/14.4.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SIMm6fAOj/2zJ2K4arAEsF7X+VqzegSWa5iFyXn+4EvRmMqiNsLafhyP9OM0J0emchqj5WNEqOuMItfi2TGhHg==",
+      "path": "senparc.weixin.mp/14.4.4",
+      "hashPath": "senparc.weixin.mp.14.4.4.nupkg.sha512"
+    },
     "stackexchange.redis/1.1.608": {
       "type": "package",
       "serviceable": true,
@@ -5659,12 +5729,12 @@
       "path": "system.diagnostics.tools/4.3.0",
       "hashPath": "system.diagnostics.tools.4.3.0.nupkg.sha512"
     },
-    "system.diagnostics.tracesource/4.0.0": {
+    "system.diagnostics.tracesource/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6WVCczFZKXwpWpzd/iJkYnsmWTSFFiU24Xx/YdHXBcu+nFI/ehTgeqdJQFbtRPzbrO3KtRNjvkhtj4t5/WwWsA==",
-      "path": "system.diagnostics.tracesource/4.0.0",
-      "hashPath": "system.diagnostics.tracesource.4.0.0.nupkg.sha512"
+      "sha512": "sha512-VnYp1NxGx8Ww731y2LJ1vpfb/DKVNKEZ8Jsh5SgQTZREL/YpWRArgh9pI8CDLmgHspZmLL697CaLvH85qQpRiw==",
+      "path": "system.diagnostics.tracesource/4.3.0",
+      "hashPath": "system.diagnostics.tracesource.4.3.0.nupkg.sha512"
     },
     "system.diagnostics.tracing/4.3.0": {
       "type": "package",
@@ -6142,12 +6212,26 @@
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
     },
-    "system.xml.xmlserializer/4.0.11": {
+    "system.xml.xmlserializer/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FrazwwqfIXTfq23mfv4zH+BjqkSFNaNFBtjzu3I9NRmG8EELYyrv/fJnttCIwRMFRR/YKXF1hmsMmMEnl55HGw==",
-      "path": "system.xml.xmlserializer/4.0.11",
-      "hashPath": "system.xml.xmlserializer.4.0.11.nupkg.sha512"
+      "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
+      "path": "system.xml.xmlserializer/4.3.0",
+      "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "system.xml.xpath/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-v1JQ5SETnQusqmS3RwStF7vwQ3L02imIzl++sewmt23VGygix04pEH+FCj1yWb+z4GDzKiljr1W7Wfvrx0YwgA==",
+      "path": "system.xml.xpath/4.3.0",
+      "hashPath": "system.xml.xpath.4.3.0.nupkg.sha512"
+    },
+    "system.xml.xpath.xmldocument/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-A/uxsWi/Ifzkmd4ArTLISMbfFs6XpRPsXZonrIqyTY70xi8t+mDtvSM5Os0RqyRDobjMBwIDHDL4NOIbkDwf7A==",
+      "path": "system.xml.xpath.xmldocument/4.3.0",
+      "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
     },
     "zkweb.system.drawing/2.0.1": {
       "type": "package",
@@ -6338,13 +6422,6 @@
       "sha512": "sha512-DsrgfY5YikLkt8oHB9vP+ndcB9Fstdpb7StxCaQCt8aasXw8lZrszcy4m9Yhq8a1b2F96zKiioBHKSu/rMoVYw==",
       "path": "system.threading.tasks.parallel/4.0.1",
       "hashPath": "system.threading.tasks.parallel.4.0.1.nupkg.sha512"
-    },
-    "system.xml.xpath/4.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-lYm7T58wI6nGLPH1yri9JfT65xD0VmedvQTzPAm7QJAuCLyPo3Crj2qnTqEOAyuGTwwnIeJdW482+kMaSOKEpg==",
-      "path": "system.xml.xpath/4.0.1",
-      "hashPath": "system.xml.xpath.4.0.1.nupkg.sha512"
     },
     "system.xml.xpath.xdocument/4.0.1": {
       "type": "package",
