@@ -3910,7 +3910,7 @@
             话题 包含“#”
             </summary>
         </member>
-        <member name="P:Shop.App.Domain.TopicSelect.Purl">
+        <member name="P:Shop.App.Domain.TopicSelect.PUrl">
             <summary>
             图片
             </summary>
