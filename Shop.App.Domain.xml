@@ -1464,11 +1464,6 @@
             最新版本号
             </summary>
         </member>
-        <member name="P:Shop.App.Domain.AppVersion.ReleaseContent">
-            <summary>
-            发布描述
-            </summary>
-        </member>
         <member name="P:Shop.App.Domain.AppVersion.Size">
             <summary>
             大小 例如 35737
