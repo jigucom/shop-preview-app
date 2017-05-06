@@ -3414,6 +3414,11 @@
             通知条数
             </summary>
         </member>
+        <member name="P:Shop.App.Domain.NotifyList.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
         <member name="P:Shop.App.Domain.PointTask.Content">
             <summary>
             任务内容
