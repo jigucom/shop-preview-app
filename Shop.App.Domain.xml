@@ -2269,6 +2269,12 @@
             是否关注 1：已关注 0：未关注
             </summary>
         </member>
+        <member name="P:Shop.App.Domain.CommRelation.bg_rgb">
+            <summary>
+            mod by andrew
+            新增背景颜色的字段
+            </summary>
+        </member>
         <member name="P:Shop.App.Domain.CommShare.Url">
             <summary>
             分享url
