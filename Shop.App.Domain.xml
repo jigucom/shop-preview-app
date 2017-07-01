@@ -3561,6 +3561,12 @@
             作者头像缩略图
             </summary>
         </member>
+        <member name="T:Shop.App.Domain.CommBar">
+            <summary>
+            mod by andrew 20170627
+            根据需求，修改成用于获取某个社区分类下头顶显示的banner
+            </summary>
+        </member>
         <member name="P:Shop.App.Domain.CommBar.IsActivity">
             <summary>
             1为活动 0为公告
@@ -3569,6 +3575,11 @@
         <member name="P:Shop.App.Domain.CommBar.DocId">
             <summary>
             关联的帖子id
+            </summary>
+        </member>
+        <member name="P:Shop.App.Domain.CommBar.PUrl">
+            <summary>
+            关联的图片url
             </summary>
         </member>
         <member name="P:Shop.App.Domain.MemberGroup.Member_Account">
